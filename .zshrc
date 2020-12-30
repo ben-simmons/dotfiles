@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # homebrew
 BREW_PREFIX=$(brew --prefix)
 export PATH="$BREW_PREFIX/bin:$PATH"
+export PATH="$BREW_PREFIX/sbin:$PATH"
 [ -f $BREW_PREFIX/etc/bash_completion ] && . $BREW_PREFIX/etc/bash_completion
 
 # virtualenv

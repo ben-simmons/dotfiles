@@ -12,8 +12,8 @@ brew update
 brew upgrade
 
 brew install bash
-brew install vim --with-override-system-vi
-brew install wget --with-iri
+brew install vim
+brew install wget
 
 brew install ag
 brew install git
