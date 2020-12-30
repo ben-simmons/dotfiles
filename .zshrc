@@ -112,7 +112,8 @@ source $BREW_PREFIX/bin/virtualenvwrapper.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-alias ls="ls -al"
+alias l="ls"
+alias la="ls -al"
 
 # Always use python3 for pip
 alias pip="$BREW_PREFIX/bin/pip3"
