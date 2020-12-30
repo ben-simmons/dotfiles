@@ -17,6 +17,7 @@ brew install wget
 
 brew install ag
 brew install git
+brew install git-gui
 brew install imagemagick
 brew install mtr
 brew install tree
