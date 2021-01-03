@@ -123,6 +123,7 @@ alias pip="pip3"
 alias gc="git commit"
 alias gcam="git commit -am"  # Commit all edited files with message
 alias gcaa="git commit -a --amend"  # Add all edited files to head commit
+alias gl="git log"
 alias gp="git push"
 alias gs="git status"
 
