@@ -115,8 +115,9 @@ source $BREW_PREFIX/bin/virtualenvwrapper.sh
 alias l="ls"
 alias la="ls -al"
 
-# Always use python3 for pip
-alias pip="$BREW_PREFIX/bin/pip3"
+# Override python2 commands with python3
+alias python="python3"
+alias pip="pip3"
 
 # git
 alias gc="git commit"
