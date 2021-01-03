@@ -89,18 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# homebrew
-BREW_PREFIX=$(brew --prefix)
-export PATH="$BREW_PREFIX/bin:$PATH"
-export PATH="$BREW_PREFIX/sbin:$PATH"
-[ -f $BREW_PREFIX/etc/bash_completion ] && . $BREW_PREFIX/etc/bash_completion
-
-# virtualenv
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$BREW_PREFIX/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=$BREW_PREFIX/bin/virtualenv
-source $BREW_PREFIX/bin/virtualenvwrapper.sh
-
 #
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -112,24 +100,15 @@ source $BREW_PREFIX/bin/virtualenvwrapper.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-alias l="ls"
-alias la="ls -al"
-
-# Override python2 commands with python3
-alias python="python3"
-alias pip="pip3"
-
-# git
-alias gc="git commit"
-alias gcam="git commit -am"  # Commit all edited files with message
-alias gcaa="git commit -a --amend"  # Add all edited files to head commit
-alias gl="git log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'"  # Compressed graph log format
-alias gp="git push"
-alias gs="git status"
-
-# Delete all remote tracking Git branches where the upstream branch has been deleted
-alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -d"
-
 # Bind keys
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
+
+# Source shell dotfiles
+for file in ~/.{aliases,functions,path,extra,exports}; do
+	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
+		# shellcheck source=/dev/null
+		source "$file"
+	fi
+done
+unset file
