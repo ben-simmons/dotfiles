@@ -27,4 +27,5 @@ function link_dotfile {
   ln -s ${dotfiles_dir}/${1} ${dest}
 }
 
+link_dotfile .gitconfig
 link_dotfile .zshrc
