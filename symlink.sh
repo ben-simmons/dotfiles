@@ -27,5 +27,8 @@ function link_dotfile {
   ln -s ${dotfiles_dir}/${1} ${dest}
 }
 
+link_dotfile .aliases
+link_dotfile .exports
+link_dotfile .extra
 link_dotfile .gitconfig
 link_dotfile .zshrc
