@@ -2,9 +2,9 @@
 
 Made for mac and zsh.
 
-Run `./symlink.sh` to update system dotfiles. 
+Run `bin/symlink.sh` to update system dotfiles. 
 
-Run `./brew.sh` to update homebrew packages.
+Run `bin/brew.sh` to update homebrew packages.
 
 Credentials and private things go into `.extra`.
 
@@ -40,3 +40,4 @@ git config --global github.user "$GH_USER"
 
 * [github.com/tomnomnom/dotfiles](https://github.com/tomnomnom/dotfiles)
 * [github.com/jessfraz/dotfiles](https://github.com/jessfraz/dotfiles)
+* [github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)

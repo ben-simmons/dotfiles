@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Assume we're in the bin directory below dotfiles
-dotfiles_dir=$(dirname "$0")/..
+CWD="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+dotfiles_dir=${CWD}/..
 
 # link function from https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 function link_dotfile {
@@ -10,22 +11,22 @@ function link_dotfile {
 
   if [ -h ~/${1} ]; then
     # Existing symlink 
-    echo "Removing existing symlink: ${dest}"
+    # echo "Removing existing symlink: ${dest}"
     rm ${dest} 
 
   elif [ -f "${dest}" ]; then
     # Existing file
-    echo "Backing up existing file: ${dest}"
+    # echo "Backing up existing file: ${dest}"
     mv ${dest}{,.${dateStr}}
 
   elif [ -d "${dest}" ]; then
     # Existing dir
-    echo "Backing up existing dir: ${dest}"
+    # echo "Backing up existing dir: ${dest}"
     mv ${dest}{,.${dateStr}}
   fi
 
-  echo "Creating new symlink: ${dest}"
-  ln -s ${dotfiles_dir}/${1} ${dest}
+  # echo "Creating new symlink: ${dest}"
+  ln -sv ${dotfiles_dir}/${1} ${dest}
 }
 
 link_dotfile .aliases
