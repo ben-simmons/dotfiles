@@ -30,6 +30,7 @@ function link_dotfile {
 link_dotfile .aliases
 link_dotfile .exports
 link_dotfile .extra
+link_dotfile .functions
 link_dotfile .gitconfig
 link_dotfile .pythonrc
 link_dotfile .zshrc
