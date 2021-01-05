@@ -2,25 +2,38 @@
 
 Made for mac and zsh.
 
-Run `bin/symlink.sh` to update system dotfiles. 
-
-Run `bin/brew.sh` to update homebrew packages.
-
 Credentials and private things go into `.extra`.
 
 ## Setup
 
 ### Installing
 
-Run `git update-index --skip-worktree .gitconfig`.
+Run to update homebrew packages:
 
-Git is tracking this file, so we can't just add it to .gitignore, but we also
-don't want it to always be marked as updated by the git config commands in `.extra`.
-If you need to edit `.gitconfig` for a commit, then do this:
+```
+bin/brew.sh
+```
 
-1. `git update-index --no-skip-worktree .gitconfig`
-2. `git config user.name "YOUR_NAME" --local`
-3. `git config user.email "YOUR_EMAIL" --local`
+Run to update system dotfiles:
+
+```
+bin/symlink.sh
+```
+
+Source `.zshrc` for changes to take effect.
+
+Run this so that changes to `.gitconfig` don't update the working tree every time `.extra` is sourced:
+
+```
+git update-index --skip-worktree .gitconfig
+```
+
+Git is tracking this file, so we can't just add it to `.gitignore`, but we also don't want it to always be marked as
+updated by the git config commands in `.extra`. If you need to edit `.gitconfig` for a commit, then do this:
+
+```bash
+git update-index --no-skip-worktree .gitconfig
+```
 
 ### Customizing
 
