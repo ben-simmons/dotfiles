@@ -115,3 +115,7 @@ unset file
 
 # Source other files
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
