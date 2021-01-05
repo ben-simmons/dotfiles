@@ -40,6 +40,7 @@ git config --global github.user "$GH_USER"
 
 ## References
 
-* [github.com/tomnomnom/dotfiles](https://github.com/tomnomnom/dotfiles)
-* [github.com/jessfraz/dotfiles](https://github.com/jessfraz/dotfiles)
-* [github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+* [tomnomnom/dotfiles](https://github.com/tomnomnom/dotfiles)
+* [jessfraz/dotfiles](https://github.com/jessfraz/dotfiles)
+* [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+* [lonetwin/pythonrc](https://github.com/lonetwin/pythonrc)

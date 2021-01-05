@@ -9,7 +9,7 @@ function link_dotfile {
   dest="${HOME}/${1}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
-  if [ -h ~/${1} ]; then
+  if [ -h "${dest}" ]; then
     # Existing symlink 
     # echo "Removing existing symlink: ${dest}"
     rm ${dest} 
@@ -26,13 +26,13 @@ function link_dotfile {
   fi
 
   # echo "Creating new symlink: ${dest}"
-  ln -sv ${dotfiles_dir}/${1} ${dest}
+  ln -sv ${dotfiles_dir}/${2} ${dest}
 }
 
-link_dotfile .aliases
-link_dotfile .exports
-link_dotfile .extra
-link_dotfile .functions
-link_dotfile .gitconfig
-link_dotfile .pythonrc
-link_dotfile .zshrc
+link_dotfile .aliases .aliases
+link_dotfile .exports .exports
+link_dotfile .extra .extra
+link_dotfile .functions .functions
+link_dotfile .gitconfig .gitconfig
+link_dotfile .pythonrc pythonrc.py
+link_dotfile .zshrc .zshrc
