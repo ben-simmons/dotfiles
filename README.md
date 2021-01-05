@@ -8,21 +8,13 @@ Credentials and private things go into `extra`.
 
 ### Installing
 
-Run to update homebrew packages:
+Run the main installer script:
 
 ```
-bin/brew.sh
+bin/install.sh
 ```
 
-Run to update system dotfiles:
-
-```
-bin/symlink.sh
-```
-
-Source `~/.zshrc` for changes to take effect.
-
-Run this so that changes to `gitconfig` don't update the working tree every time `extra` is sourced:
+Run this command so that changes to `gitconfig` don't update the working tree every time `extra` is sourced:
 
 ```
 git update-index --skip-worktree gitconfig
