@@ -2,7 +2,7 @@
 
 Made for mac and zsh.
 
-Credentials and private things go into `.extra`.
+Credentials and private things go into `extra`.
 
 ## Setup
 
