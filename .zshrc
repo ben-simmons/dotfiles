@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 
-# Source shell dotfiles
+# Source my dotfiles
 for file in ~/.{aliases,functions,path,extra,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
@@ -112,3 +112,6 @@ for file in ~/.{aliases,functions,path,extra,exports}; do
 	fi
 done
 unset file
+
+# Source other files
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -15,6 +15,7 @@ brew install bash
 brew install zsh
 
 brew install ag
+brew install fzf
 brew install git
 brew install git-gui
 brew install imagemagick
