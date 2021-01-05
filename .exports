@@ -4,6 +4,9 @@ export PATH="$BREW_PREFIX/bin:$PATH"
 export PATH="$BREW_PREFIX/sbin:$PATH"
 [ -f $BREW_PREFIX/etc/bash_completion ] && . $BREW_PREFIX/etc/bash_completion
 
+# python
+export PYTHONSTARTUP=~/.pythonrc
+
 # virtualenv
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$BREW_PREFIX/bin/python3
