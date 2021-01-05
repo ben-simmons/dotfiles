@@ -34,5 +34,6 @@ link_dotfile .exports .exports
 link_dotfile .extra .extra
 link_dotfile .functions .functions
 link_dotfile .gitconfig .gitconfig
+link_dotfile .gitignore gitignore
 link_dotfile .pythonrc pythonrc.py
 link_dotfile .zshrc .zshrc

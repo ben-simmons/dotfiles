@@ -24,6 +24,9 @@
 
 [core]
 
+	# Custom global .gitignore
+	excludesfile = ~/.gitignore
+
 	editor = vim
 
 	# Make `git rebase` safer on OS X
