@@ -24,6 +24,8 @@ If you need to edit `.gitconfig` for a commit, then do this:
 
 ### Customizing
 
+Example `.extra`:
+
 ```bash
 GIT_AUTHOR_NAME="YOUR_NAME"
 GIT_AUTHOR_EMAIL="YOUR_EMAIL"
