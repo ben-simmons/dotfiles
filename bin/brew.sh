@@ -12,8 +12,7 @@ brew update
 brew upgrade
 
 brew install bash
-brew install vim
-brew install wget
+brew install zsh
 
 brew install ag
 brew install git
@@ -21,6 +20,8 @@ brew install git-gui
 brew install imagemagick
 brew install mtr
 brew install tree
+brew install vim
+brew install wget
 
 brew install python
 brew install pipenv
