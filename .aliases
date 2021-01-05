@@ -6,6 +6,7 @@ alias python="python3"
 alias pip="pip3"
 
 # git
+alias g="git"
 alias gc="git commit"
 alias gcam="git add -A && git commit -am"  # Commit all changed files with message
 alias gcaa="git add -A && git commit -a --amend --reuse-message=HEAD"  # Add all changed files to head commit
