@@ -4,9 +4,9 @@
 CWD="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 dotfiles_dir=${CWD}/..
 
-# link function from https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
+# Link function originally from https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 function link_dotfile {
-  dest="${HOME}/${1}"
+  dest="${HOME}/${2}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
   if [ -h "${dest}" ]; then
@@ -26,14 +26,14 @@ function link_dotfile {
   fi
 
   # echo "Creating new symlink: ${dest}"
-  ln -sv ${dotfiles_dir}/${2} ${dest}
+  ln -sv ${dotfiles_dir}/${1} ${dest}
 }
 
-link_dotfile .aliases .aliases
-link_dotfile .exports .exports
-link_dotfile .extra .extra
-link_dotfile .functions .functions
-link_dotfile .gitconfig .gitconfig
-link_dotfile .gitignore gitignore
-link_dotfile .pythonrc pythonrc.py
-link_dotfile .zshrc .zshrc
+link_dotfile aliases .aliases
+link_dotfile exports .exports
+link_dotfile extra .extra
+link_dotfile functions .functions
+link_dotfile gitconfig .gitconfig
+link_dotfile gitignore .gitignore
+link_dotfile pythonrc.py .pythonrc
+link_dotfile zshrc .zshrc

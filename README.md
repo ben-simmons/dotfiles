@@ -20,24 +20,24 @@ Run to update system dotfiles:
 bin/symlink.sh
 ```
 
-Source `.zshrc` for changes to take effect.
+Source `~/.zshrc` for changes to take effect.
 
-Run this so that changes to `.gitconfig` don't update the working tree every time `.extra` is sourced:
+Run this so that changes to `gitconfig` don't update the working tree every time `extra` is sourced:
 
 ```
-git update-index --skip-worktree .gitconfig
+git update-index --skip-worktree gitconfig
 ```
 
 Git is tracking this file, so we can't just add it to `.gitignore`, but we also don't want it to always be marked as
-updated by the git config commands in `.extra`. If you need to edit `.gitconfig` for a commit, then do this:
+updated by the git config commands in `extra`. If you need to edit `gitconfig` for a commit, then do this:
 
 ```bash
-git update-index --no-skip-worktree .gitconfig
+git update-index --no-skip-worktree gitconfig
 ```
 
 ### Customizing
 
-Example `.extra`:
+Example `extra`:
 
 ```bash
 GIT_AUTHOR_NAME="YOUR_NAME"
