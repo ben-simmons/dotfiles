@@ -7,12 +7,14 @@ alias pip="pip3"
 
 # git
 alias gc="git commit"
-alias gcam="git commit -am"  # Commit all edited files with message
-alias gcaa="git commit -a --amend --reuse-message=HEAD"  # Add all edited files to head commit
+alias gcam="git add -A && git commit -am"  # Commit all changed files with message
+alias gcaa="git add -A && git commit -a --amend --reuse-message=HEAD"  # Add all changed files to head commit
 alias gd="git diff"
+alias gds="git diff --name-only | xargs"  # Short git diff (file names only)
 alias gl="git log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'"  # Compressed graph log format
 alias gp="git push"
 alias gs="git status"
+alias gss="git status -s"  # Short git status
 
 # Delete all remote tracking Git branches where the upstream branch has been deleted
 alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -d"
