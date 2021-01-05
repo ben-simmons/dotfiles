@@ -60,6 +60,12 @@ In other words:
 
 Read more about [pyenv](https://github.com/pyenv/pyenv).
 
+## TODOs
+
+* Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
+* Robust bootstrapping script for a new machine.
+* Ditch oh-my-zsh.
+
 ## References
 
 * [tomnomnom/dotfiles](https://github.com/tomnomnom/dotfiles)
