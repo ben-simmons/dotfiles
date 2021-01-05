@@ -6,7 +6,7 @@
 alias l="ls"
 alias la="ls -al"
 
-alias myip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
+alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 
 ###############################################################################
 # Git                                                                         #
