@@ -44,6 +44,7 @@ brew install ag
 brew install fzf
 brew install imagemagick
 brew install mtr
+brew install pygments
 brew install tree
 brew install vim
 brew install wget
