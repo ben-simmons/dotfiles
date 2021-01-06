@@ -51,3 +51,4 @@ brew install wget
 # Fonts
 brew tap homebrew/cask-fonts
 brew install font-fira-code
+brew install font-fira-code-nerd-font

@@ -29,12 +29,18 @@ function link_dotfile {
   ln -sv ${dotfiles_dir}/${1} ${dest}
 }
 
+# shell
 link_dotfile .aliases .aliases
 link_dotfile .exports .exports
 link_dotfile .functions .functions
+link_dotfile .p10k.zsh .p10k.zsh
+link_dotfile .zshrc .zshrc
+link_dotfile .zshrc_local .zshrc_local
+
+# python
+link_dotfile .pythonrc.py .pythonrc.py
+
+# git
 link_dotfile .gitconfig .gitconfig
 link_dotfile .gitconfig_local .gitconfig_local
 link_dotfile .gitignore_global .gitignore_global
-link_dotfile .pythonrc.py .pythonrc.py
-link_dotfile .zshrc .zshrc
-link_dotfile .zshrc_local .zshrc_local
