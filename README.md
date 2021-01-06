@@ -42,12 +42,12 @@ than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a
 really nice configuration script.
 
-One gotcha is that iterm kind of clobbers the shell's theme, so you have to also tweak the iterm settings. I settled on
+One gotcha is that iTerm kind of clobbers the shell's theme, so you have to also tweak the iTerm settings. I settled on
 the Snazzy color preset and Fira Code Nerd fonts.
 
 ## Python
 
-Made for homebrew and pyenv.
+I'm using [pyenv](https://github.com/pyenv/pyenv) instead of homebrew for python version management.
 
 MacOS system python (python2) cannot be changed, and it's easiest to let homebrew install its own python (python3) for
 its own package management. A clean way to get your shell to always refer to the specific python of your choice is with
@@ -59,8 +59,6 @@ In other words:
 * If you want your own scripts and projects to run specific versions of python, manage it via pyenv.
 * If you want your homebrew tools to run a specific version of python, manage it via homebrew.
 * All the other old and crusty stuff running on python2 can use the system python (`/usr/bin/python`).
-
-Read more about [pyenv](https://github.com/pyenv/pyenv).
 
 ## TODOs
 
