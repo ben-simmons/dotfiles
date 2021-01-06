@@ -14,9 +14,12 @@ antigen theme romkatv/powerlevel10k
 
 antigen bundle git
 antigen bundle osx
+
+# zsh improvements
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle hlissner/zsh-autopair
 
 antigen apply
 
