@@ -47,6 +47,7 @@ brew install mtr
 brew install tree
 brew install vim
 brew install wget
+brew install zoxide
 
 # Fonts
 brew tap homebrew/cask-fonts
