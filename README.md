@@ -65,6 +65,7 @@ In other words:
 * Install and configure Alfred.
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
+  * Cask everything: https://piratefache.ch/update-all-your-mac-apps-in-one-command-line/
 * Complete readme (good example: https://github.com/joshukraine/dotfiles)
 * Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
 
