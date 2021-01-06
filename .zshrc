@@ -12,6 +12,7 @@ antigen use oh-my-zsh
 
 antigen theme romkatv/powerlevel10k
 
+antigen bundle colorize
 antigen bundle colored-man-pages
 antigen bundle git
 antigen bundle osx
