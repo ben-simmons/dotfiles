@@ -22,6 +22,8 @@ bin/install-symlink.sh
 
 Put bashable secret stuff into `.extra`.
 
+Put private git config into `.gitconfig_local`.
+
 ### Python
 
 Made for homebrew and pyenv.

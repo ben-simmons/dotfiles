@@ -1,10 +1,3 @@
-[user]
-	name = Ben Simmons
-	email = simmons.a.ben@gmail.com
-
-[github]
-	user = ben-simmons
-
 [alias]
 
 	# Amend the currently staged files to the latest commit
@@ -44,6 +37,10 @@
 
 	# Detect copies as well as renames
 	renames = copies
+
+[include]
+  # Include private git config, like user name and email
+  path = ~/.gitconfig_local
 
 [pull]
 
