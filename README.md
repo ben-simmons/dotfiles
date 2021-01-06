@@ -29,19 +29,7 @@ git update-index --no-skip-worktree gitconfig
 
 ### Customizing
 
-Example `extra`:
-
-```bash
-GIT_AUTHOR_NAME="YOUR_NAME"
-GIT_AUTHOR_EMAIL="YOUR_EMAIL"
-GH_USER="YOUR_GITHUB"
-
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-git config --global github.user "$GH_USER"
-```
+Put bashable secret stuff into `extra`.
 
 ### Python
 
