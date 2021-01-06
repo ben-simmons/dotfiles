@@ -53,10 +53,11 @@ Read more about [pyenv](https://github.com/pyenv/pyenv).
 
 ## TODOs
 
-* Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
+* Ditch oh-my-zsh.
+* Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
 * Complete readme (good example: https://github.com/joshukraine/dotfiles)
-* Ditch oh-my-zsh.
+* Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
 
 ## References
 
