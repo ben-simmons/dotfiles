@@ -41,7 +41,7 @@ antigen apply
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 
-# Source my dotfiles
+# Source my shell files
 for file in ~/.{aliases,functions,exports,zshrc_local}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
@@ -50,12 +50,13 @@ for file in ~/.{aliases,functions,exports,zshrc_local}; do
 done
 unset file
 
-# Source other files
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# p10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

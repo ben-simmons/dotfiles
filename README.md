@@ -26,13 +26,24 @@ bin/install-symlink.sh
 
 ### iTerm2
 
-Link your iTerm2 profile.
+Link your iTerm2 profile:
 
 1. Open iTerm2
 2. Select iTerm2 > Preferences
 3. Under the General tab, check the box labeled "Load preferences from a custom folder or URL".
-   1. Note: if you select an empty folder, it will export your current preferences into that folder. 
+    1. Note: if you select an empty folder, it will export your current preferences into that folder.
 4. Point it to `~/dotfiles/iterm/com.googlecode.iterm2.plist`.
+
+## Shell
+
+I'm using [antigen](https://github.com/zsh-users/antigen) to manage zsh plugins because it feels cleaner
+than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
+
+For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a
+really nice configuration script.
+
+One gotcha is that iterm kind of clobbers the shell's theme, so you have to also tweak the iterm settings. I settled on
+the Snazzy color preset and Fira Code Nerd fonts.
 
 ## Python
 
@@ -53,7 +64,7 @@ Read more about [pyenv](https://github.com/pyenv/pyenv).
 
 ## TODOs
 
-* Ditch oh-my-zsh.
+* Install and configure Alfred.
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
 * Complete readme (good example: https://github.com/joshukraine/dotfiles)
