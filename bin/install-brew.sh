@@ -38,7 +38,7 @@ brew install pyenv-virtualenv
 brew install git
 brew install git-gui
 
-# Everything else
+# Other tools
 brew install ag
 brew install fzf
 brew install imagemagick
@@ -46,3 +46,7 @@ brew install mtr
 brew install tree
 brew install vim
 brew install wget
+
+# Fonts
+brew tap homebrew/cask-fonts
+brew install font-fira-code
