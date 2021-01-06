@@ -40,11 +40,8 @@ I'm using [antigen](https://github.com/zsh-users/antigen) to manage zsh plugins 
 than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 
 For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a
-really nice configuration script.
-
-One gotcha is that iTerm kind of clobbers the shell's theme, so you have to also tweak the iTerm settings. I settled on
-the [Snazzy](https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/master/Snazzy.itermcolors) color scheme and
-Fira Code Nerd fonts.
+really nice configuration script. I like using p10k with the [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
+color scheme and Fira Code Nerd fonts.
 
 ## Python
 
