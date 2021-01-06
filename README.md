@@ -2,9 +2,13 @@
 
 Made for mac and zsh.
 
-## Setup
+## Customizing
 
-### Installing
+Put bashable secret stuff into `.extra`.
+
+Put private git config into `.gitconfig_local`.
+
+## Installing
 
 Run the main installer script:
 
@@ -18,13 +22,19 @@ Or just update the symlinks:
 bin/install-symlink.sh
 ```
 
-### Customizing
+## Post-install
 
-Put bashable secret stuff into `.extra`.
+### iTerm2
 
-Put private git config into `.gitconfig_local`.
+Link your iTerm2 profile.
 
-### Python
+1. Open iTerm2
+2. Select iTerm2 > Preferences
+3. Under the General tab, check the box labeled "Load preferences from a custom folder or URL".
+   1. Note: if you select an empty folder, it will export your current preferences into that folder. 
+4. Point it to `~/dotfiles/iterm/com.googlecode.iterm2.plist`.
+
+## Python
 
 Made for homebrew and pyenv.
 
@@ -45,6 +55,7 @@ Read more about [pyenv](https://github.com/pyenv/pyenv).
 
 * Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
 * Robust bootstrapping script for a new machine.
+* Complete readme (good example: https://github.com/joshukraine/dotfiles)
 * Ditch oh-my-zsh.
 
 ## References
