@@ -2,8 +2,6 @@
 
 Made for mac and zsh.
 
-Credentials and private things go into `extra`.
-
 ## Setup
 
 ### Installing
@@ -14,22 +12,15 @@ Run the main installer script:
 bin/install.sh
 ```
 
-Run this command so that changes to `gitconfig` don't update the working tree every time `extra` is sourced:
+Or just update the symlinks:
 
 ```
-git update-index --skip-worktree gitconfig
-```
-
-Git is tracking this file, so we can't just add it to `.gitignore`, but we also don't want it to always be marked as
-updated by the git config commands in `extra`. If you need to edit `gitconfig` for a commit, then do this:
-
-```bash
-git update-index --no-skip-worktree gitconfig
+bin/install-symlink.sh
 ```
 
 ### Customizing
 
-Put bashable secret stuff into `extra`.
+Put bashable secret stuff into `.extra`.
 
 ### Python
 

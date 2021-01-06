@@ -29,11 +29,11 @@ function link_dotfile {
   ln -sv ${dotfiles_dir}/${1} ${dest}
 }
 
-link_dotfile aliases .aliases
-link_dotfile exports .exports
-link_dotfile extra .extra
-link_dotfile functions .functions
-link_dotfile gitconfig .gitconfig
-link_dotfile gitignore .gitignore
-link_dotfile pythonrc.py .pythonrc
-link_dotfile zshrc .zshrc
+link_dotfile .aliases .aliases
+link_dotfile .exports .exports
+link_dotfile .extra .extra
+link_dotfile .functions .functions
+link_dotfile .gitconfig .gitconfig
+link_dotfile .gitignore_global .gitignore_global
+link_dotfile .pythonrc.py .pythonrc.py
+link_dotfile .zshrc .zshrc

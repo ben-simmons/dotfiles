@@ -107,7 +107,7 @@ config = SimpleNamespace(
     POST_EDIT_PRINT_COMMENTS = True,
 )
 
-# Color functions. These get initialized in init_color_functions() later
+# Color .functions. These get initialized in init_color_functions() later
 red = green = yellow = blue = purple = cyan = grey = str
 
 
@@ -288,7 +288,7 @@ class ImprovedConsole(InteractiveConsole):
         return inner
 
     def init_color_functions(self):
-        """Populates globals dict with some helper functions for colorizing text
+        """Populates globals dict with some helper .functions for colorizing text
         """
         def colorize(color_code, text, bold=True, readline_workaround=False):
             reset = '\033[0m'
