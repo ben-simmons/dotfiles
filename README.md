@@ -4,7 +4,7 @@ Made for mac and zsh.
 
 ## Customizing
 
-Put bashable secret stuff into `.extra`.
+Put private shell stuff into `.zshrc_local`.
 
 Put private git config into `.gitconfig_local`.
 

@@ -113,7 +113,7 @@ bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 
 # Source my dotfiles
-for file in ~/.{aliases,functions,path,extra,exports}; do
+for file in ~/.{aliases,functions,exports,zshrc_local}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
 		source "$file"
