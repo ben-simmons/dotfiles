@@ -20,19 +20,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Bind keys
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
