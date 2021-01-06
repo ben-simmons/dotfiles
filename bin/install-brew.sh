@@ -27,6 +27,7 @@ brew upgrade
 # Shells
 brew install bash
 brew install zsh
+brew install antigen
 
 # Python
 brew install python
