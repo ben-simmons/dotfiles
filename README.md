@@ -43,7 +43,8 @@ For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k
 really nice configuration script.
 
 One gotcha is that iTerm kind of clobbers the shell's theme, so you have to also tweak the iTerm settings. I settled on
-the Snazzy color preset and Fira Code Nerd fonts.
+the [Snazzy](https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/master/Snazzy.itermcolors) color scheme and
+Fira Code Nerd fonts.
 
 ## Python
 
@@ -65,7 +66,7 @@ In other words:
 * Install and configure Alfred.
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
-  * Cask everything: https://piratefache.ch/update-all-your-mac-apps-in-one-command-line/
+    * Cask everything: https://piratefache.ch/update-all-your-mac-apps-in-one-command-line/
 * Complete readme (good example: https://github.com/joshukraine/dotfiles)
 * Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
 
@@ -75,3 +76,4 @@ In other words:
 * [jessfraz/dotfiles](https://github.com/jessfraz/dotfiles)
 * [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
 * [lonetwin/pythonrc](https://github.com/lonetwin/pythonrc)
+* [denysdovhan/dotfiles](https://github.com/denysdovhan/dotfiles) - creator of spaceship zsh theme
