@@ -60,9 +60,12 @@ In other words:
 
 ## TODOs
 
-* Install and configure Alfred.
+* Update shell scripts to use `#!/usr/bin/env bash` instead of `#!/bin/bash`.
+* Add macos settings. Disable smart quotes and smart dashes for starters. Something
+  like [this](https://wilsonmar.github.io/dotfiles/) or [this](https://github.com/mathiasbynens/dotfiles).
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
+    * Comprehensive mac setup: https://github.com/ptb/mac-setup
     * Cask everything: https://piratefache.ch/update-all-your-mac-apps-in-one-command-line/
 * Complete readme (good example: https://github.com/joshukraine/dotfiles)
 * Group config by program (zsh, iterm, vim) instead of by file type (script vs symlinkable dotfile).
