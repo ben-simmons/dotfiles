@@ -24,6 +24,13 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle hlissner/zsh-autopair
 
+# Speed up pasting
+# https://github.com/romkatv/powerlevel10k/issues/568
+# https://github.com/ohmyzsh/ohmyzsh/issues/5569
+# Must be exported before oh-my-zsh is sourced to be effective
+# (i.e. before antigen apply)
+export DISABLE_MAGIC_FUNCTIONS=true
+
 antigen apply
 
 # Preferred editor for local and remote sessions
