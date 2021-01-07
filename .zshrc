@@ -16,6 +16,7 @@ antigen bundle colorize
 antigen bundle colored-man-pages
 antigen bundle git
 antigen bundle osx
+antigen bundle web-search
 
 # zsh improvements
 antigen bundle zsh-users/zsh-autosuggestions

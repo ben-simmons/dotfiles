@@ -30,19 +30,3 @@ alias gss="git status -s"  # Short git status
 
 # Delete all remote tracking Git branches where the upstream branch has been deleted
 alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -d"
-
-###############################################################################
-# Web search                                                                  #
-###############################################################################
-alias google='web_search google'
-alias ddg='web_search duckduckgo'
-alias sp='web_search startpage'
-alias github='web_search github'
-
-# bangs
-alias wiki='web_search duckduckgo \!w'
-alias news='web_search duckduckgo \!n'
-alias youtube='web_search duckduckgo \!yt'
-alias map='web_search duckduckgo \!m'
-alias image='web_search duckduckgo \!i'
-alias ducky='web_search duckduckgo \!'
