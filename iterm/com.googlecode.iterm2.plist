@@ -676,7 +676,7 @@
 			<key>Custom Command</key>
 			<string>Custom Shell</string>
 			<key>Custom Directory</key>
-			<string>Recycle</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -2892,15 +2892,6 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/ben</string>
-											<string>/Users/ben</string>
-											<string>/Users/ben</string>
-											<string>/Users/ben</string>
-											<string>/Users/ben/dotfiles</string>
-											<string>/Users/ben/dotfiles</string>
-											<string>/Users/ben/dotfiles</string>
-											<string>/Users/ben/dotfiles</string>
-											<string>/Users/ben/dotfiles</string>
 										</array>
 										<key>Environment</key>
 										<dict>
@@ -2948,7 +2939,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ben/dotfiles</string>
+										<string>/Users/ben</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -3875,12 +3866,12 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/ben/dotfiles</string>
+											<string>/Users/ben</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/ben/dotfiles</string>
+											<string>/Users/ben</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -3923,7 +3914,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ben/dotfiles</string>
+										<string>/Users/ben</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
