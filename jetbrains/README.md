@@ -31,5 +31,6 @@ be [synced](https://www.jetbrains.com/help/pycharm/sharing-your-ide-settings.htm
 | Navigate Forward | Cmd+]
 | Preferences | Cmd+,
 | Problems | Cmd+6
+| Reformat File | Cmd+Shift+F | I use this a ton for cleaning up code comments & markdown to auto-break the lines nicely into 120 char lengths.
 | Run | Cmd+4
 | Search Everywhere | Shift+Shift
