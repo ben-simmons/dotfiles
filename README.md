@@ -60,7 +60,6 @@ In other words:
 
 ## TODOs
 
-* Update shell scripts to use `#!/usr/bin/env bash` instead of `#!/bin/bash`.
 * Add macos settings. Disable smart quotes and smart dashes for starters. Something
   like [this](https://wilsonmar.github.io/dotfiles/) or [this](https://github.com/mathiasbynens/dotfiles).
 * Learn workflow with vim and tmux.
