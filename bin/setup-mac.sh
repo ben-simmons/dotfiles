@@ -49,5 +49,10 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# Use function keys as standard function keys. (Require Fn modifier key to enable special media functions.)
+# Use all F1, F2, etc. keys as standard function keys
+# NOTE: This requires a reboot to take effect. See http://apple.stackexchange.com/questions/59178 for details.
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
