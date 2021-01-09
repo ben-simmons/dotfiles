@@ -11,6 +11,7 @@ be [synced](https://www.jetbrains.com/help/pycharm/sharing-your-ide-settings.htm
 | :--- | :---
 | Find | Cmd+F
 | Find Action | Cmd+3
+| Go to Declaration or Usages | Cmd+Click
 | Python Console | Ctrl+Shift+C
 | Run File in Python Console | Ctrl+Shift+A
 | Replace | Ctrl+R
@@ -26,6 +27,8 @@ be [synced](https://www.jetbrains.com/help/pycharm/sharing-your-ide-settings.htm
 | Go to File | Cmd+Shift+R
 | Move Statement Up | Alt+Up
 | Move Statement Down | Alt+Down
+| Navigate Back | Cmd+[ | Useful for returning after Cmd+Click
+| Navigate Forward | Cmd+]
 | Preferences | Cmd+,
 | Problems | Cmd+6
 | Run | Cmd+4
