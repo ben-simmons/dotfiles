@@ -60,8 +60,10 @@ In other words:
 
 ## TODOs
 
-* Add macos settings. Disable smart quotes and smart dashes for starters. Something
-  like [this](https://wilsonmar.github.io/dotfiles/) or [this](https://github.com/mathiasbynens/dotfiles).
+* Fix line with `%` on iterm startup (does not occur after startup even when opening new window/tab/pane).
+* Switch to [this dotfiles system](https://www.atlassian.com/git/tutorials/dotfiles) where you use a bare git repo with
+  work-tree set to `$HOME`? Looks like it eliminates the work of copying dotfiles into your repo and symlinking back
+  to `$HOME`.
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
     * Comprehensive mac setup: https://github.com/ptb/mac-setup
