@@ -33,6 +33,7 @@ function link_dotfile {
 link_dotfile .aliases .aliases
 link_dotfile .exports .exports
 link_dotfile .functions .functions
+link_dotfile .fzf.zsh .fzf.zsh
 link_dotfile .p10k.zsh .p10k.zsh
 link_dotfile .zshrc .zshrc
 link_dotfile .zshrc_local .zshrc_local
