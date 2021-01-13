@@ -20,14 +20,15 @@ be [synced](https://www.jetbrains.com/help/pycharm/sharing-your-ide-settings.htm
 
 | Action | Shortcut | Notes
 | :--- | :--- | :---
-| Add or Remove Caret | Alt+Click | Useful for editing multiple lines
+| Add or Remove Caret | Alt+Click | Useful for editing multiple lines.
 | Debug | Cmd+5
 | File Structure | Cmd+O
+| Find in Files | Ctrl+H | Follow up with Alt+{P,M,D,S} to move through project, module, directory, and scope tabs.
 | Go to Class | Cmd+Shift+T
 | Go to File | Cmd+Shift+R
 | Move Statement Up | Alt+Up
 | Move Statement Down | Alt+Down
-| Navigate Back | Cmd+[ | Useful for returning after Cmd+Click
+| Navigate Back | Cmd+[ | Useful for returning after Cmd+Click.
 | Navigate Forward | Cmd+]
 | Preferences | Cmd+,
 | Problems | Cmd+6
