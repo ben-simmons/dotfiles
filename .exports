@@ -24,4 +24,4 @@ source $BREW_PREFIX/bin/virtualenvwrapper.sh
 export PIPENV_PYTHON="$(pyenv root)/shims/python"
 
 # colorize
-export ZSH_COLORIZE_STYLE='solarized-dark'
+export ZSH_COLORIZE_STYLE='native'
