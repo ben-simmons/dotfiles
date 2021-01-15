@@ -56,3 +56,7 @@ defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Change screenshot location to its own folder (don't clutter Desktop)
+mkdir -p ~/Desktop/screenshots
+defaults write com.apple.screencapture location ~/Desktop/screenshots
