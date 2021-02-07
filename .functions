@@ -76,6 +76,14 @@ up() {
     cd "$(pwd | sed -E 's;(/[^/]*){0,'$d'}$;;')/";
 }
 
+# Wifi
+wifi() {
+  local ssid pw
+  ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F': ' '/ SSID/{print $2}')
+  pw=$(security find-generic-password -wa ${ssid})
+  echo "$ssid\n$pw"
+}
+
 ###############################################################################
 # Git                                                                         #
 ###############################################################################
