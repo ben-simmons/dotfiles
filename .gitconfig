@@ -39,8 +39,13 @@
 	renames = copies
 
 [include]
-  # Include private git config, like user name and email
-  path = ~/.gitconfig_local
+
+	# Include private git config, like user name and email
+	path = ~/.gitconfig_local
+
+[init]
+
+	defaultBranch = main
 
 [pull]
 
