@@ -39,6 +39,11 @@ brew install pyenv-virtualenv
 brew install git
 brew install git-gui
 
+# AWS
+brew tap aws/tap
+brew install awscli
+brew install aws-sam-cli
+
 # Other tools
 brew install ag
 brew install fzf
