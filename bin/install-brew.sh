@@ -60,3 +60,6 @@ brew install zoxide
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 brew install font-fira-code-nerd-font
+
+# Casks
+brew install --cask graphql-playground
