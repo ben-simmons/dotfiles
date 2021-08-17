@@ -53,6 +53,7 @@ brew install pygments
 brew install tree
 brew install vim
 brew install wget
+brew install yarn
 brew install zoxide
 
 # Fonts
