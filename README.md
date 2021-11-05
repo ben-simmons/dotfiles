@@ -22,7 +22,7 @@ Or just update the symlinks:
 bin/install-symlink.sh
 ```
 
-## Post-install
+## Post Install
 
 ### iTerm2
 

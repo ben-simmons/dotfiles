@@ -46,10 +46,9 @@ bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 
 # Source my shell files
 for file in ~/.{aliases,functions,exports,zshrc_local}; do
-	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
-		# shellcheck source=/dev/null
-		source "$file"
-	fi
+  if [[ -r "$file" ]] && [[ -f "$file" ]]; then
+    source "$file"
+  fi
 done
 unset file
 
@@ -64,6 +63,7 @@ eval "$(zoxide init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pyenv
+export PATH=$(pyenv root)/shims:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
