@@ -68,20 +68,20 @@ json() {
 
 # Quick upward "cd .." for given number of levels
 up() {
-    # default parameter to 1 if non provided
-    declare -i d=${@:-1}
-    # ensure given parameter is non-negative. Print error and return if it is
-    (( $d < 0 )) && (>&2 echo "up: Error: negative value provided") && return 1;
-    # remove last d directories from pwd, append "/" in case result is empty
-    cd "$(pwd | sed -E 's;(/[^/]*){0,'$d'}$;;')/";
+	# default parameter to 1 if non provided
+	declare -i d=${@:-1}
+	# ensure given parameter is non-negative. Print error and return if it is
+	(( $d < 0 )) && (>&2 echo "up: Error: negative value provided") && return 1;
+	# remove last d directories from pwd, append "/" in case result is empty
+	cd "$(pwd | sed -E 's;(/[^/]*){0,'$d'}$;;')/";
 }
 
 # Wifi
 wifi() {
-  local ssid pw
-  ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F': ' '/ SSID/{print $2}')
-  pw=$(security find-generic-password -wa ${ssid})
-  echo "$ssid\n$pw"
+	local ssid pw
+	ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F': ' '/ SSID/{print $2}')
+	pw=$(security find-generic-password -wa ${ssid})
+	echo "$ssid\n$pw"
 }
 
 ###############################################################################
@@ -89,7 +89,23 @@ wifi() {
 ###############################################################################
 # Switch to a branch, creating it if necessary
 ggo() {
-  git checkout -b "${1}" 2> /dev/null || git checkout "${1}"
+	git checkout -b "${1}" 2> /dev/null || git checkout "${1}"
+}
+
+# Push the current branch to origin as branch with same name
+# If on branch "cool-branch": "gpo" --> git push origin cool-branch
+gpo() {
+	git push origin "$(git branch --show-current)"
+}
+
+gpfo() {
+	git push origin --force-with-lease "$(git branch --show-current)"
+}
+
+# Apply nth stash, or "git stash apply n"
+# "gstan 0" --> git stash apply stash@{0}
+gstan() {
+	git stash apply "stash@{${1}}"
 }
 
 ###############################################################################
@@ -97,7 +113,7 @@ ggo() {
 ###############################################################################
 # Path to current python pointed to by pyenv
 whichpy() {
-  pyenv which python
+	pyenv which python
 }
 
 ###############################################################################

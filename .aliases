@@ -10,10 +10,6 @@ alias la="ls -al"
 
 alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 
-# Python
-alias py='python'
-alias pyv='python --version'
-
 ###############################################################################
 # Git                                                                         #
 ###############################################################################
@@ -21,22 +17,46 @@ alias g="git"
 alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit"
-alias gcam="git commit -am"  # Commit all indexed file changes with message
-alias gcaa="git commit -a --amend --reuse-message=HEAD"  # Add all indexed file changes to head commit
-alias gacam="git add --all && git commit -am"  # Commit ALL changes with message
-alias gacaa="git add --all && git commit -a --amend --reuse-message=HEAD"  # Add ALL changes to head commit
+alias gca="git commit --all"
+alias gcam="git commit --all --message"  # Commit all indexed file changes with message
+alias gcaa="git commit --all --amend"  # Add all indexed file changes to head commit
+alias gcaar="git commit --all --amend --reuse-message=HEAD"
+alias gacam="git add --all && git commit --all --message"  # Commit ALL changes with message
+alias gacaa="git add --all && git commit --all --amend"  # Add ALL changes to head commit
+alias gacaar="git add --all && git commit --all --amend --reuse-message=HEAD"
 alias gd="git diff"
 alias gds="git diff --name-only"  # Short git diff (file names only)
 alias gl="git log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'"  # Compressed graph log format
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gs="git status"
-alias gss="git status -s"  # Short git status
+alias gss="git status --short"  # Short git status
 alias gst="git stash"
-alias gsta="git stash apply"
 alias gstl="git stash list"
-alias gstp="git stash pop"
 alias gsts="git stash save"
+alias gstsa="git stash save --all"
+alias gstsm="git stash save --message"
+alias gstsam="git stash save --all --message"
 
 # Delete all remote tracking Git branches where the upstream branch has been deleted
 alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -d"
+
+###############################################################################
+# Node                                                                        #
+###############################################################################
+alias nodev="node --version"
+alias ya="yarn add"
+alias yc="yarn compile"  # yarn tsc
+alias yi="yarn install"
+alias yr="yarn remove"
+alias ys="yarn start"
+alias yt="yarn test"
+alias yv="yarn --version"
+alias yclean="yarn tsc --build --clean"  # Delete all the transpiled files
+
+###############################################################################
+# Python                                                                      #
+###############################################################################
+alias py="python"
+alias pyv="python --version"
+
