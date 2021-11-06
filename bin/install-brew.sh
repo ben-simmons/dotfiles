@@ -46,6 +46,7 @@ brew install aws-sam-cli
 
 # Other tools
 brew install ag
+brew install exa
 brew install fzf
 brew install imagemagick
 brew install mtr

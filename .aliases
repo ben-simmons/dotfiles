@@ -5,10 +5,15 @@
 ###############################################################################
 alias cd..="cd .."
 
-alias l="ls"
-alias la="ls -al"
+alias e="exa"
+alias ea="exa --all --long"
+alias et="exa --tree"
+alias etgi="exa --tree --git-ignore"
 
 alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
+
+alias l="ls"
+alias la="ls -al"
 
 ###############################################################################
 # Git                                                                         #
