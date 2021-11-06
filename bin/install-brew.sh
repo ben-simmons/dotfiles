@@ -26,6 +26,7 @@ brew upgrade
 
 # Shells
 brew install bash
+brew install bash-completion
 brew install zsh
 brew install antigen
 
