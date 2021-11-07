@@ -5,7 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Antigen
+###############################################################################
+# Antigen                                                                     #
+###############################################################################
 source $(brew --prefix)/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
@@ -17,6 +19,7 @@ antigen bundle colored-man-pages
 antigen bundle git
 antigen bundle osx
 antigen bundle web-search
+antigen bundle Aloxaf/fzf-tab
 
 # zsh improvements
 antigen bundle zsh-users/zsh-autosuggestions
@@ -33,17 +36,9 @@ export DISABLE_MAGIC_FUNCTIONS=true
 
 antigen apply
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Bind keys
-bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
-bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
-
+###############################################################################
+# Dotfiles                                                                    #
+###############################################################################
 # Source my shell files
 for file in ~/.{aliases,functions,exports,zshrc_local}; do
   if [[ -r "$file" ]] && [[ -f "$file" ]]; then
@@ -52,32 +47,78 @@ for file in ~/.{aliases,functions,exports,zshrc_local}; do
 done
 unset file
 
-# bash completion
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+###############################################################################
+# Bind keys                                                                   #
+###############################################################################
+bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
+bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# zoxide
-eval "$(zoxide init zsh)"
-
-# p10k
+###############################################################################
+# Powerlevel10k                                                               #
+###############################################################################
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# pyenv
+###############################################################################
+# FZF                                                                         #
+###############################################################################
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# https://github.com/junegunn/fzf#usage
+#export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# Use ripgrep instead of grep
+# https://www.hschne.at/2020/04/25/creating-a-fuzzy-shell-with-fzf-and-friends.html
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+###############################################################################
+# zoxide                                                                      #
+###############################################################################
+eval "$(zoxide init zsh)"
+
+###############################################################################
+# nvm                                                                         #
+###############################################################################
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+###############################################################################
+# pyenv                                                                       #
+###############################################################################
 export PATH=$(pyenv root)/shims:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+###############################################################################
+# Autocompletion                                                              #
+###############################################################################
+# Include hidden files in autocompletion
+setopt globdots
+
+# bash completion
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+
+# zsh completions
+#if type brew &>/dev/null; then
+#  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+#
+#  autoload -Uz compinit
+#  compinit
+#fi
+
+# fzf-tab
+# https://github.com/Aloxaf/fzf-tab#configure
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# preview directory's content with exa when completing z
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
+

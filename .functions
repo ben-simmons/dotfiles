@@ -66,6 +66,11 @@ json() {
 	fi
 }
 
+# Print the $PATH variable in lines
+path() {
+	echo "${PATH//:/\n}"
+}
+
 # Quick upward "cd .." for given number of levels
 up() {
 	# default parameter to 1 if non provided
@@ -120,6 +125,22 @@ whichpy() {
 # FZF                                                                         #
 # https://sourabhbajaj.com/mac-setup/iTerm/fzf.html                           #
 ###############################################################################
+# fcommand - fzf to find a command's definition
+fcommand() {
+	echo $(which $(compgen -c | fzf))
+}
+
+# fenv - fuzzy search for environment variables and echo selection's value
+fenv() {
+	echo "$(env | fzf)"
+}
+
+# fvar - fuzzy search for shell variables and echo selection's value
+fvar() {
+	var_name=$(compgen -v | fzf)
+	echo "${var_name}=${(P)var_name}"
+}
+
 # fd - cd to selected directory
 fd() {
   local dir
@@ -129,6 +150,7 @@ fd() {
 }
 
 # fh - search in your command history and execute selected command
+# NOTE: Ctrl-R does this better
 fh() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
