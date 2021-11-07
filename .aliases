@@ -16,6 +16,13 @@ alias l="ls"
 alias la="ls -al"
 
 ###############################################################################
+# FZF                                                                         #
+###############################################################################
+alias falias="alias | fzf"  # Fuzzy search for alias definitions
+alias fea="exa -al | fzf" 
+alias fla="ls -al | fzf"  # Fuzzy search ls
+
+###############################################################################
 # Git                                                                         #
 ###############################################################################
 alias g="git"
@@ -24,11 +31,9 @@ alias gaa="git add --all"
 alias gc="git commit"
 alias gca="git commit --all"
 alias gcam="git commit --all --message"  # Commit all indexed file changes with message
-alias gcaa="git commit --all --amend"  # Add all indexed file changes to head commit
-alias gcaar="git commit --all --amend --reuse-message=HEAD"
-alias gacam="git add --all && git commit --all --message"  # Commit ALL changes with message
-alias gacaa="git add --all && git commit --all --amend"  # Add ALL changes to head commit
-alias gacaar="git add --all && git commit --all --amend --reuse-message=HEAD"
+alias gcaa="git commit --all --amend --reuse-message=HEAD"  # Add all indexed changes to head commit
+alias gacam="git add --all && git commit --all --message"  # Commit ALL changes, including untracked files, with message
+alias gacaa="git add --all && git commit --all --amend --reuse-message=HEAD"  # Add ALL changes, including untracked files to head commit
 alias gd="git diff"
 alias gds="git diff --name-only"  # Short git diff (file names only)
 alias gl="git log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'"  # Compressed graph log format
