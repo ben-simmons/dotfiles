@@ -60,6 +60,7 @@
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     command_execution_time    # previous command duration
     virtualenv                # python virtual environment
+    node_version              # node.js version
     context                   # user@host
     # time                    # current time
   )
@@ -93,6 +94,12 @@
   # Don't show Python version.
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=true
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
+
+  ##############################[ node_version: node.js version ]###############################
+  # Node version color.
+  typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=$grey
+  # Show node version only when in a directory tree containing package.json.
+  typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
 
   # Blue current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
