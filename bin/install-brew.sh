@@ -65,4 +65,8 @@ brew install font-fira-code
 brew install font-fira-code-nerd-font
 
 # Casks
+brew install --cask google-chrome
 brew install --cask graphql-playground
+brew install --cask iterm2
+brew install --cask spotify
+
