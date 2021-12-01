@@ -11,3 +11,4 @@ mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
 # Install Custom Sublime Text sublime
 cp -rv ${settings_dir}/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+

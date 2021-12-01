@@ -9,3 +9,4 @@ source ${CWD}/install-symlink.sh
 
 chsh -s $(brew --prefix)/bin/zsh
 source ${HOME}/.zshrc
+
