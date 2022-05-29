@@ -121,6 +121,19 @@ whichpy() {
 	pyenv which python
 }
 
+##############################################################################
+#
+# VLC
+#
+###############################################################################
+# Cut a video into a shorter video segment.
+# Start and stop time are in seconds.
+# Usage: cutvideo $source_video $destination_video $start_time $stop_time
+#        cutvideo ~/foo.mp4 ~/foo-cut.mp4 0 60
+cutvideo() {
+	vlc ${1} --start-time=${3} --stop-time=${4} --sout "#gather:std{access=file,dst=${2}}" --sout-keep vlc://quit
+}
+
 ###############################################################################
 # FZF                                                                         #
 # https://sourabhbajaj.com/mac-setup/iTerm/fzf.html                           #
