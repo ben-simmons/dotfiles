@@ -12,13 +12,13 @@ Put private git config into `.gitconfig_local`.
 
 Run the main installer script:
 
-```
+```bash
 bin/install.sh
 ```
 
 Or just update the symlinks:
 
-```
+```bash
 bin/install-symlink.sh
 ```
 
@@ -29,7 +29,7 @@ bin/install-symlink.sh
 Link your iTerm2 profile:
 
 1. Open iTerm2
-2. Select iTerm2 > Preferences
+2. Select iTerm2 > Settings
 3. Under the General tab, check the box labeled "Load preferences from a custom folder or URL".
     1. Note: if you select an empty folder, it will export your current preferences into that folder.
 4. Point it to `~/dotfiles/iterm/com.googlecode.iterm2.plist`.
@@ -39,9 +39,9 @@ Link your iTerm2 profile:
 I'm using [antigen](https://github.com/zsh-users/antigen) to manage zsh plugins because it feels cleaner
 than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 
-For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a
-really nice configuration script. I like using p10k with the [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
-color scheme and Fira Code Nerd fonts.
+For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a really nice configuration script.
+I've configured it to use the Pure style, and I like using the [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
+iTerm2 theme with Fira Code Nerd fonts.
 
 ## Python
 
@@ -58,12 +58,59 @@ In other words:
 * If you want your homebrew tools to run a specific version of python, manage it via homebrew.
 * All the other old and crusty stuff running on python2 can use the system python (`/usr/bin/python`).
 
+Installation:
+
+1. Manually lookup latest python version number.
+2. Run these commands:
+
+```bash
+# choose latest version
+pyenv install X.X.X
+
+# set latest version to be the global default
+pyenv global X.X.X
+
+# verify it worked
+pyenv version
+```
+
+Virtualenvs:
+
+Use pyenv to manage virtualenvs.
+
+```bash
+# list
+pyenv virtualenvs
+
+# create
+pyenv virtualenv NAME_ME
+
+# activate
+pyenv activate NAME_ME 
+
+# deactivate
+source deactivate
+```
+
+Pipenv:
+
+Pipenv by default uses the global python version of your system
+Therefore we don't have to do anything special since we've set the global version via pyenv.
+Just use pipenv as usual:
+
+```bash
+pipenv install NAME_ME
+```
+
+See https://www.rootstrap.com/blog/how-to-manage-your-python-projects-with-pipenv-pyenv.
+
+
 ## TODOs
 
-* Fix line with `%` on iterm startup (does not occur after startup even when opening new window/tab/pane).
 * Switch to [this dotfiles system](https://www.atlassian.com/git/tutorials/dotfiles) where you use a bare git repo with
   work-tree set to `$HOME`? Looks like it eliminates the work of copying dotfiles into your repo and symlinking back
   to `$HOME`.
+* How to use pyenv with venv?
 * Learn workflow with vim and tmux.
 * Robust bootstrapping script for a new machine.
     * Comprehensive mac setup: https://github.com/ptb/mac-setup

@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-# Install homebrew
-if test ! $(which brew)
-then
-  echo "Installing Homebrew for you."
-
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
-
-fi
+## Install homebrew
+#if test ! $(which brew)
+#then
+#  echo "Installing Homebrew for you."
+#
+#  # Install the correct homebrew for each OS type
+#  if test "$(uname)" = "Darwin"
+#  then
+#    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
+#  then
+#    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+#  fi
+#
+#fi
 
 brew analytics off
 
@@ -41,14 +41,18 @@ brew install git
 brew install git-gui
 
 # AWS
-brew tap aws/tap
-brew install awscli
-brew install aws-sam-cli
+#brew tap aws/tap
+#brew install awscli
+#brew install aws-sam-cli
+
+# fzf
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
 
 # Other tools
 brew install ag
 brew install exa
-brew install fzf
 brew install imagemagick
 brew install mtr
 brew install pygments
@@ -65,10 +69,10 @@ brew install font-fira-code
 brew install font-fira-code-nerd-font
 
 # Casks
-brew install --cask google-chrome
-brew install --cask graphql-playground
-brew install --cask iterm2
-brew install --cask spotify
-brew install --cask visual-studio-code
-brew install --cask vlc
+#brew install --cask google-chrome
+#brew install --cask graphql-playground
+#brew install --cask iterm2
+#brew install --cask spotify
+#brew install --cask visual-studio-code
+#brew install --cask vlc
 

@@ -15,9 +15,9 @@ export PYTHONSTARTUP=~/.pythonrc.py
 
 # virtualenv
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$BREW_PREFIX/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=$BREW_PREFIX/bin/virtualenv
-source $BREW_PREFIX/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=$BREW_PREFIX/bin/python3
+#export VIRTUALENVWRAPPER_VIRTUALENV=$BREW_PREFIX/bin/virtualenv
+#source $BREW_PREFIX/bin/virtualenvwrapper.sh
 
 # pipenv
 # https://stackoverflow.com/questions/51201018/pipenv-not-recognizing-pyenv-version

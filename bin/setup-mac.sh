@@ -2,12 +2,12 @@
 
 # based on https://mths.be/macos
 
-## this will print an error if there's a problem with Xcode
-xcodebuild -version
-## install Xcode command line tools
-xcode-select --install
-## accept Xcode EULA
-sudo xcodebuild -license
+### this will print an error if there's a problem with Xcode
+#xcodebuild -version
+### install Xcode command line tools
+#xcode-select --install
+### accept Xcode EULA
+#sudo xcodebuild -license
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false

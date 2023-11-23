@@ -10,7 +10,7 @@ alias ea="exa --all --long"
 alias et="exa --tree"
 alias etgi="exa --tree --git-ignore"
 
-alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
+alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '\"'"
 
 alias l="ls"
 alias la="ls -al"
@@ -54,15 +54,15 @@ alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' |
 ###############################################################################
 # Node                                                                        #
 ###############################################################################
-alias nodev="node --version"
-alias ya="yarn add"
-alias yc="yarn compile"  # yarn tsc
-alias yi="yarn install"
-alias yr="yarn remove"
-alias ys="yarn start"
-alias yt="yarn test"
-alias yv="yarn --version"
-alias yclean="yarn tsc --build --clean"  # Delete all the transpiled files
+#alias nodev="node --version"
+#alias ya="yarn add"
+#alias yc="yarn compile"  # yarn tsc
+#alias yi="yarn install"
+#alias yr="yarn remove"
+#alias ys="yarn start"
+#alias yt="yarn test"
+#alias yv="yarn --version"
+#alias yclean="yarn tsc --build --clean"  # Delete all the transpiled files
 
 ###############################################################################
 # Python                                                                      #
