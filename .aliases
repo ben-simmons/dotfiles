@@ -5,10 +5,10 @@
 ###############################################################################
 alias cd..="cd .."
 
-alias e="exa"
-alias ea="exa --all --long"
-alias et="exa --tree"
-alias etgi="exa --tree --git-ignore"
+alias e="eza"
+alias ea="eza --all --long"
+alias et="eza --tree"
+alias etgi="eza --tree --git-ignore"
 
 alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '\"'"
 
@@ -19,7 +19,7 @@ alias la="ls -al"
 # FZF                                                                         #
 ###############################################################################
 alias falias="alias | fzf"  # Fuzzy search for alias definitions
-alias fea="exa -al | fzf" 
+alias fea="eza -al | fzf"
 alias fla="ls -al | fzf"  # Fuzzy search ls
 
 ###############################################################################

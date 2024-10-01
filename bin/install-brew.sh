@@ -52,7 +52,7 @@ $(brew --prefix)/opt/fzf/install
 
 # Other tools
 brew install ag
-brew install exa
+brew install eza
 brew install imagemagick
 brew install mtr
 brew install pygments
