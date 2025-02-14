@@ -51,17 +51,18 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install
 
 # Other tools
-brew install ag
-brew install eza
+brew install ag             # better ack (code search)
+brew install eza            # better ls
+brew install fd             # better find (file search)
 brew install imagemagick
-brew install mtr
-brew install pygments
-brew install ripgrep
+brew install mtr            # mac network diagnostic tool
+brew install pygments       # syntax highlighter
+brew install ripgrep        # better grep
 brew install tree
 brew install vim
 brew install wget
 brew install yarn
-brew install zoxide
+brew install zoxide         # smarter cd
 
 # Fonts
 brew tap homebrew/cask-fonts

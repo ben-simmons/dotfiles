@@ -153,7 +153,7 @@ fvar() {
 }
 
 # fd - cd to selected directory
-fd() {
+fcd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
@@ -162,7 +162,7 @@ fd() {
 
 # fh - search in your command history and execute selected command
 # NOTE: Ctrl-R does this better
-fh() {
+fhistory() {
   eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
 }
 
