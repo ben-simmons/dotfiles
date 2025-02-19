@@ -81,7 +81,46 @@ up() {
 	cd "$(pwd | sed -E 's;(/[^/]*){0,'$d'}$;;')/";
 }
 
-# Wifi
+###############################################################################
+# Network                                                                     #
+###############################################################################
+# Which network interface is active
+whichif() {
+  # Based on code here:
+  # https://superuser.com/questions/89994/how-can-i-tell-which-network-interface-my-computer-is-using/627581#627581
+  iface=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
+  if [ -n "$iface" ]; then
+      echo "$iface"
+  else
+      echo "null"
+  fi
+}
+
+# Show http traffic via ngrep
+# Usage:
+#   sniff
+#   sniff en0
+sniff() {
+  if [ $# -eq 0 ]; then
+    sudo ngrep -d "$(whichif)" -t '^(GET|POST) ' 'tcp and port 80'
+  else
+    sudo ngrep -d "$1" -t '^(GET|POST) ' 'tcp and port 80'
+  fi
+}
+
+# Show all network traffic
+# Usage:
+#   traffic
+#   traffic en0
+traffic() {
+  if [ $# -eq 0 ]; then
+    sudo tshark -i "$(whichif)"
+  else
+    sudo tshark -i "$1"
+  fi
+}
+
+# Connected wifi network name and password
 wifi() {
 	local ssid pw
 	ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F': ' '/ SSID/{print $2}')

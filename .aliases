@@ -4,16 +4,43 @@
 # General                                                                     #
 ###############################################################################
 alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Copy working directory
+alias cwd='pwd | tr -d "\r\n" | pbcopy'
 
 alias e="eza"
 alias ea="eza --all --long"
 alias et="eza --tree"
 alias etgi="eza --tree --git-ignore"
 
-alias ip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '\"'"
+alias h="history"
 
 alias l="ls"
 alias la="ls -al"
+
+alias untar='tar xvf'
+
+# URL encode strings
+alias urlencode="python -c 'import sys; from urllib import parse; print(parse.quote(sys.argv[1]));'"
+alias urldecode="python -c 'import sys; from urllib import parse; print(parse.unquote(sys.argv[1]));'"
+
+###############################################################################
+# Network                                                                     #
+###############################################################################
+alias publicip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr -d '\"'"
+alias pubip="publicip"
+alias whichip="publicip"
+alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# List network connections
+alias socks="lsof -i -n  -Tfqs"
+# List open TCP sockets
+alias tcpsocks="lsof -a -i4 -i6 -itcp"
 
 ###############################################################################
 # FZF                                                                         #
@@ -21,6 +48,12 @@ alias la="ls -al"
 alias falias="alias | fzf"  # Fuzzy search for alias definitions
 alias fea="eza -al | fzf"
 alias fla="ls -al | fzf"  # Fuzzy search ls
+
+alias fa="falias"
+alias fcom="fcommand"
+alias fe="fenv"
+alias fh="fhistory"
+alias fv="fvar"
 
 ###############################################################################
 # Git                                                                         #

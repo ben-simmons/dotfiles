@@ -30,32 +30,38 @@ brew install bash-completion
 brew install zsh
 brew install antigen
 
+# Fonts
+brew tap homebrew/cask-fonts
+brew install font-fira-code
+brew install font-fira-code-nerd-font
+
+# Fuzzy Find
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
+# Git
+brew install git
+brew install git-gui
+
 # Python
 brew install python
 brew install pipenv
 brew install pyenv
 brew install pyenv-virtualenv
 
-# Git
-brew install git
-brew install git-gui
+# Network
+brew install mtr            # network utility
+brew install ngrep          # network grep
+brew install tcpdump        # network packet analyzer
+brew install tcptraceroute  # route
+brew install wireshark      # tshark
 
-# AWS
-#brew tap aws/tap
-#brew install awscli
-#brew install aws-sam-cli
-
-# fzf
-brew install fzf
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
-
-# Other tools
+# General
 brew install ag             # better ack (code search)
 brew install eza            # better ls
 brew install fd             # better find (file search)
 brew install imagemagick
-brew install mtr            # mac network diagnostic tool
 brew install pygments       # syntax highlighter
 brew install ripgrep        # better grep
 brew install tree
@@ -64,10 +70,10 @@ brew install wget
 brew install yarn
 brew install zoxide         # smarter cd
 
-# Fonts
-brew tap homebrew/cask-fonts
-brew install font-fira-code
-brew install font-fira-code-nerd-font
+# AWS
+#brew tap aws/tap
+#brew install awscli
+#brew install aws-sam-cli
 
 # Casks
 #brew install --cask google-chrome
