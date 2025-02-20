@@ -35,6 +35,20 @@ brew tap homebrew/cask-fonts
 brew install font-fira-code
 brew install font-fira-code-nerd-font
 
+# General
+brew install ag             # better ack (code search)
+brew install eza            # better ls
+brew install fd             # better find (file search)
+brew install imagemagick
+brew install jq             # json processor
+brew install pygments       # syntax highlighter
+brew install ripgrep        # better grep
+brew install tree
+brew install vim
+brew install wget
+brew install yarn
+brew install zoxide         # smarter cd
+
 # Fuzzy Find
 brew install fzf
 # To install useful key bindings and fuzzy completion:
@@ -56,19 +70,6 @@ brew install ngrep          # network grep
 brew install tcpdump        # network packet analyzer
 brew install tcptraceroute  # route
 brew install wireshark      # tshark
-
-# General
-brew install ag             # better ack (code search)
-brew install eza            # better ls
-brew install fd             # better find (file search)
-brew install imagemagick
-brew install pygments       # syntax highlighter
-brew install ripgrep        # better grep
-brew install tree
-brew install vim
-brew install wget
-brew install yarn
-brew install zoxide         # smarter cd
 
 # AWS
 #brew tap aws/tap

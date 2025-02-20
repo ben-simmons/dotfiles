@@ -103,3 +103,8 @@ alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' |
 alias py="python"
 alias pyv="python --version"
 
+###############################################################################
+# AI                                                                          #
+###############################################################################
+alias chat="openai"
+alias chatgpt="openai"

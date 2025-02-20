@@ -47,6 +47,9 @@ for file in ~/.{aliases,functions,exports,zshrc_local}; do
 done
 unset file
 
+# Put all the custom commands in PATH
+export PATH=~/.local/bin:$PATH
+
 ###############################################################################
 # Bind keys                                                                   #
 ###############################################################################

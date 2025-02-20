@@ -13,13 +13,13 @@ Put private git config into `.gitconfig_local`.
 Run the main installer script:
 
 ```bash
-bin/install.sh
+scripts/install.sh
 ```
 
 Or just update the symlinks:
 
 ```bash
-bin/install-symlink.sh
+scripts/install-symlinks.sh
 ```
 
 ## Post Install
@@ -42,6 +42,26 @@ than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a really nice configuration script.
 I've configured it to use the Pure style, and I like using the [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
 iTerm2 theme with Fira Code Nerd fonts.
+
+## AI
+
+Setup:
+
+1. Open iTerm2 > Settings > General > AI.
+2. Install plugin.
+3. Click "Enable generative AI feature"
+4. Add your OpenAI API key.
+   * https://platform.openai.com/api-keys
+5. Also export it as `OPEN_API_KEY` in `.zshrc_local` for use with the `openai` custom command.
+
+To use:
+
+1. Open composer view with `Cmd+Shift+.`
+2. Write prompt.
+3. Submit prompt with `Cmd+Y`.
+4. Run composed command with `Shift+Return`.
+   * NOTE: This will exit the composer view and RUN its contents in the shell.
+   * Exit with `Esc` if you don't want to run the contents of composer view (the generated command).
 
 ## Python
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Assume we're in the bin directory below dotfiles
+# Assume we're in the scripts directory below dotfiles
 CWD="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 dotfiles_dir=${CWD}/..
 
@@ -46,3 +46,6 @@ link_dotfile .gitconfig .gitconfig
 link_dotfile .gitconfig_local .gitconfig_local
 link_dotfile .gitignore_global .gitignore_global
 
+# custom commands
+mkdir -p "${HOME}"/.local/bin
+link_dotfile bin .local/bin
