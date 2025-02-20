@@ -32,7 +32,13 @@ Link your iTerm2 profile:
 2. Select iTerm2 > Settings
 3. Under the General tab, check the box labeled "Load preferences from a custom folder or URL".
     1. Note: if you select an empty folder, it will export your current preferences into that folder.
-4. Point it to `~/dotfiles/iterm/com.googlecode.iterm2.plist`.
+4. Point it to `~/dotfiles/iterm2/com.googlecode.iterm2.plist`.
+
+Install Shell Integration:
+
+1. Only need to do this the first time, or if there's an update to the scripts. I've copied the outputs to [iterm2/shell_integration](./iterm2/shell_integration) and symlinked.
+2. iTerm2 > Install Shell Integration.
+
 
 ## Shell
 
@@ -42,6 +48,15 @@ than [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 For the theme I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k), which is quite fast, slick, and has a really nice configuration script.
 I've configured it to use the Pure style, and I like using the [Snazzy](https://github.com/sindresorhus/iterm2-snazzy)
 iTerm2 theme with Fira Code Nerd fonts.
+
+Iterm shell integration allows iterm to read your shell output. A useful shortcut is `Cmd+Shift+A`, which copies the last
+shell output. Useful for chaining commands.
+
+## Custom Commands
+
+For custom shell commands, add your bash files to the [.local/bin](.local/bin) folder.
+
+The [install-symlinks.sh](scripts/install-symlinks.sh) script links them, and [.zshrc](.zshrc) puts `~/.local/bin` on the `$PATH`. 
 
 ## AI
 

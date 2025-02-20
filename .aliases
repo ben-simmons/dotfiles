@@ -107,4 +107,3 @@ alias pyv="python --version"
 # AI                                                                          #
 ###############################################################################
 alias chat="openai"
-alias chatgpt="openai"

@@ -41,8 +41,9 @@ brew install eza            # better ls
 brew install fd             # better find (file search)
 brew install imagemagick
 brew install jq             # json processor
+brew install nano
 brew install pygments       # syntax highlighter
-brew install ripgrep        # better grep
+brew install ripgrep        # faster grep
 brew install tree
 brew install vim
 brew install wget

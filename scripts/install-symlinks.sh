@@ -29,6 +29,10 @@ function link_dotfile {
   ln -sv ${dotfiles_dir}/${1} ${dest}
 }
 
+# iterm
+link_dotfile iterm2/shell_integration/.iterm2 .iterm2
+link_dotfile iterm2/shell_integration/.iterm2_shell_integration.zsh .iterm2_shell_integration.zsh
+
 # shell
 link_dotfile .aliases .aliases
 link_dotfile .exports .exports
@@ -47,5 +51,4 @@ link_dotfile .gitconfig_local .gitconfig_local
 link_dotfile .gitignore_global .gitignore_global
 
 # custom commands
-mkdir -p "${HOME}"/.local/bin
-link_dotfile bin .local/bin
+link_dotfile .local .local
