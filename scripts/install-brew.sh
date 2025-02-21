@@ -44,6 +44,7 @@ brew install htop           # better top
 brew install httpie         # better curl
 brew install imagemagick
 brew install jq             # json processor
+brew install localtunnel
 brew install nano
 brew install neofetch       # system info
 brew install pygments       # syntax highlighter

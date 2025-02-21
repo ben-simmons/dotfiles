@@ -53,6 +53,7 @@ alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-
 alias files="lsof | grep -E 'REG|DIR'"
 # Open ports
 alias ports="lsof -i -P -n | grep LISTEN"
+alias watchports="watch -n 2 'lsof -i -P -n | grep LISTEN'"
 # Open sockets
 alias socks="lsof -i -n  -Tfqs"
 # Open TCP sockets

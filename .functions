@@ -128,6 +128,78 @@ wifi() {
 	echo "$ssid\n$pw"
 }
 
+# Start a simple local file server
+function start_server() {
+    local PORT=${1:-8000}  # Default to port 8000 if not specified
+
+    # Kill any process using the port
+    local PID=$(lsof -ti :$PORT)
+    if [[ -n "$PID" ]]; then
+        echo "Port $PORT is in use. Killing process $PID..."
+        kill -9 $PID
+        sleep 1  # Give time for the port to release
+    fi
+
+    # Start Python HTTP server in the background
+    echo "Starting Python HTTP server on port $PORT..."
+    python3 -m http.server $PORT &
+
+    # Get the new process ID
+    SERVER_PID=$!
+    echo "Server started with PID $SERVER_PID"
+
+    # Trap Ctrl+C to stop the server
+    trap "echo 'Stopping server...'; kill -9 $SERVER_PID; echo 'Port $PORT freed.'; exit 0" SIGINT
+
+    # Keep the script running so Ctrl+C works properly
+    wait $SERVER_PID
+}
+
+# Start a simple local file server and expose it with localtunnel
+start_server_tunnel() {
+    local PORT=${1:-8000}  # Default to port 8000 if not specified
+    local SUBDOMAIN=${2:-""}  # Optional subdomain
+
+    # Kill any process using the port
+    local PID=$(lsof -ti :$PORT)
+    if [[ -n "$PID" ]]; then
+        echo "Port $PORT is in use. Killing process $PID..."
+        kill -9 $PID
+        sleep 1  # Give time for the port to release
+    fi
+
+    # Start the Python HTTP server in the background
+    echo "Starting Python HTTP server on port $PORT..."
+    python3 -m http.server $PORT &
+
+    # Get the new process ID
+    SERVER_PID=$!
+    echo "Server started with PID $SERVER_PID"
+
+    # Wait briefly to ensure the server starts
+    sleep 2
+
+    # Start localtunnel
+    if [[ -n "$SUBDOMAIN" ]]; then
+        echo "Starting localtunnel on port $PORT with subdomain '$SUBDOMAIN'..."
+        lt --port $PORT --subdomain "$SUBDOMAIN" &
+    else
+        echo "Starting localtunnel on port $PORT..."
+        lt --port $PORT &
+    fi
+
+    # Get the localtunnel process ID
+    TUNNEL_PID=$!
+    echo "Localtunnel started with PID $TUNNEL_PID"
+    echo "your ip is: $(publicip)"
+
+    # Trap Ctrl+C to stop both processes
+    trap "echo 'Stopping server and tunnel...'; kill -9 $SERVER_PID $TUNNEL_PID; echo 'Port $PORT freed.'; exit 0" SIGINT
+
+    # Keep script running so Ctrl+C works properly
+    wait $SERVER_PID
+}
+
 ###############################################################################
 # Git                                                                         #
 ###############################################################################
