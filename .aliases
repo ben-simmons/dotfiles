@@ -9,6 +9,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias c="clear"
+
 # Copy working directory
 alias cwd='pwd | tr -d "\r\n" | pbcopy'
 
@@ -21,6 +23,16 @@ alias h="history"
 
 alias l="ls"
 alias la="ls -al"
+
+alias now="date '+%Y-%m-%d %H:%M:%S'"
+alias week="date +%V"        # Get week number
+alias dayofweek="date +%A"   # Get day of the week
+alias day="dayofweek"
+alias month="date +%m"
+alias monthname="date +%B"
+alias dayofmonth="date +%d"  # Get day of the month
+alias year="date +%Y"
+alias dayofyear="date +%j"   # Get day of the year
 
 alias untar='tar xvf'
 
@@ -37,10 +49,14 @@ alias whichip="publicip"
 alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
-# List network connections
+# Open files
+alias files="lsof | grep -E 'REG|DIR'"
+# Open ports
+alias ports="lsof -i -P -n | grep LISTEN"
+# Open sockets
 alias socks="lsof -i -n  -Tfqs"
-# List open TCP sockets
-alias tcpsocks="lsof -a -i4 -i6 -itcp"
+# Open TCP sockets
+alias tcpsocks="lsof -a -i4 -i6 -iTCP"
 
 ###############################################################################
 # FZF                                                                         #
@@ -66,7 +82,7 @@ alias gca="git commit --all"
 alias gcam="git commit --all --message"  # Commit all indexed file changes with message
 alias gcaa="git commit --all --amend --reuse-message=HEAD"  # Add all indexed changes to head commit
 alias gacam="git add --all && git commit --all --message"  # Commit ALL changes, including untracked files, with message
-alias gacaa="git add --all && git commit --all --amend --reuse-message=HEAD"  # Add ALL changes, including untracked files to head commit
+alias gacaa="git add --all && git commit --all --amend --reuse-message=HEAD"  # Add ALL changes, including untracked files, to head commit
 alias gd="git diff"
 alias gds="git diff --name-only"  # Short git diff (file names only)
 alias gl="git log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'"  # Compressed graph log format

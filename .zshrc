@@ -37,6 +37,18 @@ export DISABLE_MAGIC_FUNCTIONS=true
 antigen apply
 
 ###############################################################################
+# iTerm2                                                                      #
+###############################################################################
+# Shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+###############################################################################
+# Powerlevel10k                                                               #
+###############################################################################
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+###############################################################################
 # Dotfiles                                                                    #
 ###############################################################################
 # Source my shell files
@@ -55,12 +67,6 @@ export PATH=~/.local/bin:$PATH
 ###############################################################################
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
-
-###############################################################################
-# Powerlevel10k                                                               #
-###############################################################################
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ###############################################################################
 # FZF                                                                         #
@@ -82,9 +88,9 @@ eval "$(zoxide init zsh)"
 ###############################################################################
 # nvm                                                                         #
 ###############################################################################
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ###############################################################################
 # pyenv                                                                       #
@@ -124,10 +130,3 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
-
-###############################################################################
-# iTerm                                                                       #
-###############################################################################
-# Shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

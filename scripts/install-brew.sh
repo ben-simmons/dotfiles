@@ -37,15 +37,22 @@ brew install font-fira-code-nerd-font
 
 # General
 brew install ag             # better ack (code search)
+brew install bat            # better cat
 brew install eza            # better ls
 brew install fd             # better find (file search)
+brew install htop           # better top
+brew install httpie         # better curl
 brew install imagemagick
 brew install jq             # json processor
 brew install nano
+brew install neofetch       # system info
 brew install pygments       # syntax highlighter
 brew install ripgrep        # faster grep
+brew install shellcheck
+brew install tldr           # simpler man pages
 brew install tree
 brew install vim
+brew install watch
 brew install wget
 brew install yarn
 brew install zoxide         # smarter cd
@@ -58,6 +65,7 @@ $(brew --prefix)/opt/fzf/install
 # Git
 brew install git
 brew install git-gui
+brew install hub            # github
 
 # Python
 brew install python
@@ -65,10 +73,15 @@ brew install pipenv
 brew install pyenv
 brew install pyenv-virtualenv
 
+# Database
+brew install postgresql
+brew install sqlite
+
 # Network
-brew install mtr            # network utility
+brew install mtr
 brew install ngrep          # network grep
-brew install tcpdump        # network packet analyzer
+brew install nmap
+brew install tcpdump        # packet analyzer
 brew install tcptraceroute  # route
 brew install wireshark      # tshark
 
