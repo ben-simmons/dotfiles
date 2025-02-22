@@ -120,6 +120,16 @@ alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' |
 alias py="python"
 alias pyv="python --version"
 
+alias pe="pipenv"
+alias peg="pipenv graph"
+alias peh="pipenv --help"
+alias pei="pipenv install"
+alias pelr="pipenv lock --requirements > requirements.txt"
+alias per="pipenv run"
+alias pes="pipenv shell"
+alias peu="pipenv uninstall"
+alias peup="pipenv update"
+
 ###############################################################################
 # AI                                                                          #
 ###############################################################################
