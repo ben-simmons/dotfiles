@@ -70,9 +70,10 @@ brew install hub            # github
 
 # Python
 brew install python
-brew install pipenv
 brew install pyenv
-brew install pyenv-virtualenv
+
+brew install poetry
+poetry config virtualenvs.in-project true
 
 # Database
 brew install postgresql
@@ -92,10 +93,8 @@ brew install wireshark      # tshark
 #brew install aws-sam-cli
 
 # Casks
+#brew install --cask cursor
 #brew install --cask google-chrome
-#brew install --cask graphql-playground
 #brew install --cask iterm2
 #brew install --cask spotify
-#brew install --cask visual-studio-code
 #brew install --cask vlc
-

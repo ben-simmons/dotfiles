@@ -7,14 +7,14 @@ be [synced](https://www.jetbrains.com/help/pycharm/sharing-your-ide-settings.htm
 
 ### Custom
 
-| Action | Shortcut
-| :--- | :---
-| Find | Cmd+F
-| Find Action | Cmd+3
-| Go to Declaration or Usages | Cmd+Click
-| Python Console | Ctrl+Shift+C
-| Run File in Python Console | Ctrl+Shift+A
-| Replace | Ctrl+R
+| Action                      | Shortcut     | Notes
+|:----------------------------|:-------------| :---
+| Find                        | Cmd+F        
+| Find Action                 | Cmd+Shift+P  | Originally Cmd+Shift+A, changed because of a macos conflict. Cmd+Shift+P is the VS Code shortcut for the Command Palette, which is similar.
+| Go to Declaration or Usages | Cmd+Click    
+| Python Console              | Ctrl+Shift+C 
+| Run File in Python Console  | Ctrl+Shift+A 
+| Replace                     | Ctrl+R       
 
 ### Useful
 

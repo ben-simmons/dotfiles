@@ -1,52 +1,52 @@
 [alias]
 
-	# Amend the currently staged files to the latest commit
-	amend = commit --amend --reuse-message=HEAD
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
 
-	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
-	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+    # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
-	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
 
-	# Find commits by source code
-	fc = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 
-	# Find commits by commit message
-	fm = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	undo = !git reset HEAD~1 --mixed
+    undo = !git reset HEAD~1 --mixed
 
-[core]
+    [core]
 
-	# Custom global .gitignore
-	excludesfile = ~/.gitignore_global
+    # Custom global .gitignore
+    excludesfile = ~/.gitignore_global
 
-	editor = vim
+    editor = vim
 
-	# Make `git rebase` safer on OS X
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
+    # Make `git rebase` safer on OS X
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
 
-[diff]
+    [diff]
 
-	# Detect copies as well as renames
-	renames = copies
+    # Detect copies as well as renames
+    renames = copies
 
-[include]
+    [include]
 
-	# Include private git config, like user name and email
-	path = ~/.gitconfig_local
+    # Include private git config, like user name and email
+    path = ~/.gitconfig_local
 
-[init]
+    [init]
 
-	defaultBranch = main
+    defaultBranch = main
 
-[pull]
+    [pull]
 
-	rebase = true
+    rebase = true
