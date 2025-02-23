@@ -87,6 +87,9 @@ brew install tcpdump        # packet analyzer
 brew install tcptraceroute  # route
 brew install wireshark      # tshark
 
+# AI
+brew install ollama
+
 # AWS
 #brew tap aws/tap
 #brew install awscli

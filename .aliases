@@ -143,3 +143,7 @@ alias pos="poetry shell"
 # AI                                                                          #
 ###############################################################################
 alias chat="openai"
+
+alias ol="ollama"
+alias ols="ollama serve"
+alias olr="ollama run"
