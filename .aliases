@@ -138,6 +138,15 @@ alias pol="poetry list"
 alias pon="poetry new"
 alias por="poetry run"
 alias pos="poetry shell"
+alias posh="poetry show"
+alias poshtop="poetry show --top-level"
+alias poshtree="poetry show --tree"
+
+###############################################################################
+# Cloud                                                                       #
+###############################################################################
+alias azure="az"
+alias ocean="doctl"
 
 ###############################################################################
 # AI                                                                          #

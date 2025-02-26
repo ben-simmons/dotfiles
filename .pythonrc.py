@@ -728,7 +728,6 @@ class ImprovedConsole(InteractiveConsole):
         # Exit the Python shell on exiting the InteractiveConsole
         sys.exit()
 
-
 if not os.getenv('SKIP_PYMP'):
     # - create our pimped out console and fire it up !
     pymp = ImprovedConsole(locals=CLEAN_NS)

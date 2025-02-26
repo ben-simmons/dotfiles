@@ -24,16 +24,17 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Shells
-brew install bash
-brew install bash-completion
-brew install zsh
-brew install antigen
-
 # Fonts
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 brew install font-fira-code-nerd-font
+
+# Shells
+brew install bash
+brew install bash-completion
+brew install zsh
+
+brew install antigen
 
 # General
 brew install ag             # better ack (code search)
@@ -43,7 +44,7 @@ brew install fd             # better find (file search)
 brew install htop           # better top
 brew install httpie         # better curl
 brew install imagemagick
-brew install jq             # json processor
+brew install jq             # json
 brew install localtunnel
 brew install nano
 brew install neofetch       # system info
@@ -68,6 +69,9 @@ brew install git
 brew install git-gui
 brew install hub            # github
 
+# Node
+brew install nvm
+
 # Python
 brew install python
 brew install pyenv
@@ -87,18 +91,23 @@ brew install tcpdump        # packet analyzer
 brew install tcptraceroute  # route
 brew install wireshark      # tshark
 
+# Cloud
+brew install --cask docker  # Docker
+
+brew install aws-cdk        # AWS Cloud Development Kit
+brew install aws-sam-cli    # AWS Serverless Application Model
+brew install awscli         # AWS
+brew install azure-cli      # Azure
+brew install doctl          # Digital Ocean
+
 # AI
 brew install ollama
+brew install supabase/tap/supabase
 
-# AWS
-#brew tap aws/tap
-#brew install awscli
-#brew install aws-sam-cli
-
-# Casks
-#brew install --cask cursor
-brew install --cask docker
-#brew install --cask google-chrome
-#brew install --cask iterm2
-#brew install --cask spotify
-#brew install --cask vlc
+# Applications
+brew install --cask cursor
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask spotify
+brew install --cask vlc
+brew install --cask wireshark

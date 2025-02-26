@@ -19,6 +19,22 @@ without any real structure to what I'm doing.
 * `gstl` - List stash.
 * `gstan` - Apply the nth stash, where n is 0-indexed.
 
+## Mac
+
+Shortcuts
+
+| Action                    | Shortcut                | Notes                               |
+|:--------------------------|:------------------------|:------------------------------------|
+| Lock screen               | Ctrl + Cmd + Q          |                                     |
+| Search everywhere         | Cmd + Space             | Spotlight Search                    |
+| Switch window             | Ctrl + Arrow            |                                     |
+| Switch window with select | Cmd + Tab (+ Arrow)     |                                     |
+| End of line               | Cmd + Right             |                                     |
+| Beginning of line         | Cmd + Left              |                                     |
+| Delete line               | Cmd + Backspace         |                                     |
+| Mission Control           | Swipe up with 3 fingers |                                     |
+| AI prompt                 | Opt + Space             | ChatGPT and Claude both map to this | 
+
 ## Zoxide
 
 Easily navigate to frequently accessed folders with fuzzy find.
