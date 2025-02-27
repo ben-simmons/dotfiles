@@ -34,11 +34,14 @@ alias dayofmonth="date +%d"  # Get day of the month
 alias year="date +%Y"
 alias dayofyear="date +%j"   # Get day of the year
 
+alias pw="password"
+
 alias untar='tar xvf'
 
 # URL encode strings
 alias urlencode="python -c 'import sys; from urllib import parse; print(parse.quote(sys.argv[1]));'"
 alias urldecode="python -c 'import sys; from urllib import parse; print(parse.unquote(sys.argv[1]));'"
+
 
 ###############################################################################
 # Network                                                                     #
@@ -59,18 +62,25 @@ alias socks="lsof -i -n  -Tfqs"
 # Open TCP sockets
 alias tcpsocks="lsof -a -i4 -i6 -iTCP"
 
+
 ###############################################################################
 # FZF                                                                         #
 ###############################################################################
-alias falias="alias | fzf"  # Fuzzy search for alias definitions
+alias f="fzf"
+
+alias falias="alias | fzf"
+alias fpath="path | fzf"
+
 alias fea="eza -al | fzf"
-alias fla="ls -al | fzf"  # Fuzzy search ls
+alias fla="ls -al | fzf"
 
 alias fa="falias"
 alias fcom="fcommand"
 alias fe="fenv"
 alias fh="fhistory"
+alias fp="fpath"
 alias fv="fvar"
+
 
 ###############################################################################
 # Git                                                                         #
@@ -101,6 +111,14 @@ alias gstsam="git stash save --all --message"
 # Delete all remote tracking Git branches where the upstream branch has been deleted
 alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -d"
 
+
+###############################################################################
+# Database                                                                    #
+###############################################################################
+alias cy="cypher-shell"
+alias neo="cypher-shell"
+
+
 ###############################################################################
 # Node                                                                        #
 ###############################################################################
@@ -113,6 +131,7 @@ alias git_prune="git fetch --prune && git branch -vv | grep 'origin/.*: gone]' |
 #alias yt="yarn test"
 #alias yv="yarn --version"
 #alias yclean="yarn tsc --build --clean"  # Delete all the transpiled files
+
 
 ###############################################################################
 # Python                                                                      #
@@ -142,11 +161,13 @@ alias posh="poetry show"
 alias poshtop="poetry show --top-level"
 alias poshtree="poetry show --tree"
 
+
 ###############################################################################
 # Cloud                                                                       #
 ###############################################################################
 alias azure="az"
 alias ocean="doctl"
+
 
 ###############################################################################
 # AI                                                                          #

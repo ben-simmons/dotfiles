@@ -80,7 +80,9 @@ brew install poetry
 poetry config virtualenvs.in-project true
 
 # Database
-brew install postgresql
+brew install neo4j
+brew install --cask neo4j
+brew install postgresql@17
 brew install sqlite
 
 # Network

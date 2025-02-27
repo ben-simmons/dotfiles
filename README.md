@@ -2,11 +2,17 @@
 
 Made for mac and zsh.
 
+
+
+
 ## Customizing
 
 Put private shell stuff into `.zshrc_local`.
 
 Put private git config into `.gitconfig_local`.
+
+
+
 
 ## Installing
 
@@ -21,6 +27,9 @@ Or just update the symlinks:
 ```bash
 scripts/install-symlinks.sh
 ```
+
+
+
 
 ## Post Install
 
@@ -40,6 +49,8 @@ Install Shell Integration:
 2. iTerm2 > Install Shell Integration.
 
 
+
+
 ## Shell
 
 I'm using [antigen](https://github.com/zsh-users/antigen) to manage zsh plugins because it feels cleaner
@@ -51,6 +62,9 @@ iTerm2 theme with Fira Code Nerd fonts.
 
 Iterm shell integration allows iterm to read your shell output. A useful shortcut is `Cmd+Shift+A`, which copies the last
 shell output. Useful for chaining commands.
+
+
+
 
 ## Custom Commands
 
@@ -77,6 +91,9 @@ To use:
 4. Run composed command with `Shift+Return`.
    * NOTE: This will exit the composer view and RUN its contents in the shell.
    * Exit with `Esc` if you don't want to run the contents of composer view (the generated command).
+
+
+
 
 ## Python
 
@@ -111,33 +128,24 @@ pyenv version
 
 Virtualenvs:
 
-Use pyenv to manage virtualenvs.
+Use `poetry` to manage virtualenvs.
 
-```bash
-# list
-pyenv virtualenvs
+I've configured poetry to make virtual envs in-project.
 
-# create
-pyenv virtualenv NAME_ME
 
-# activate
-pyenv activate NAME_ME 
 
-# deactivate
-source deactivate
-```
 
-Pipenv:
+## Postgres
 
-Pipenv by default uses the global python version of your system
-Therefore we don't have to do anything special since we've set the global version via pyenv.
-Just use pipenv as usual:
+Start database cluster:
 
-```bash
-pipenv install NAME_ME
-```
+```brew services start postgresql@17```
 
-See https://www.rootstrap.com/blog/how-to-manage-your-python-projects-with-pipenv-pyenv.
+Connect to default database:
+
+```psql postgres```
+
+
 
 
 ## TODOs

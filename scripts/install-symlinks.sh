@@ -51,4 +51,5 @@ link_dotfile .gitconfig_local .gitconfig_local
 link_dotfile .gitignore_global .gitignore_global
 
 # custom commands
-link_dotfile .local .local
+mkdir -p "${HOME}/.local"
+link_dotfile bin .local/bin

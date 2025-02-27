@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 ###############################################################################
 # Antigen                                                                     #
 ###############################################################################
@@ -36,17 +37,20 @@ export DISABLE_MAGIC_FUNCTIONS=true
 
 antigen apply
 
+
 ###############################################################################
 # iTerm2                                                                      #
 ###############################################################################
 # Shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
 ###############################################################################
 # Powerlevel10k                                                               #
 ###############################################################################
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 ###############################################################################
 # Dotfiles                                                                    #
@@ -60,13 +64,15 @@ done
 unset file
 
 # Put all the custom commands in PATH
-export PATH=~/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
+
 
 ###############################################################################
 # Bind keys                                                                   #
 ###############################################################################
 bindkey '\e\e[C' forward-word   # [Alt-RightArrow] (\e removes beeps)
 bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
+
 
 ###############################################################################
 # FZF                                                                         #
@@ -80,10 +86,12 @@ bindkey '\e\e[D' backward-word  # [Alt-LeftArrow] (\e removes beeps)
 # https://www.hschne.at/2020/04/25/creating-a-fuzzy-shell-with-fzf-and-friends.html
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+
 ###############################################################################
 # zoxide                                                                      #
 ###############################################################################
 eval "$(zoxide init zsh)"
+
 
 ###############################################################################
 # nvm                                                                         #
@@ -92,12 +100,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 ###############################################################################
 # pyenv                                                                       #
 ###############################################################################
 export PATH=$(pyenv root)/shims:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+
+###############################################################################
+# Postgres                                                                    #
+###############################################################################
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
 
 ###############################################################################
 # Autocompletion                                                              #
