@@ -282,6 +282,11 @@ gpfo() {
   git push origin --force-with-lease "$(git branch --show-current)"
 }
 
+# Show the git remotes for a given git repo directory
+gremotes() {
+  git -C "$1" remote -v
+}
+
 # Apply nth stash, or "git stash apply n"
 # "gstan 0" --> git stash apply stash@{0}
 gstan() {

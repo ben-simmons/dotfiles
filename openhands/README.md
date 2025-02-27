@@ -10,7 +10,7 @@
 2. Go to http://localhost:3000 in your browser.
 3. Stop with `openhands_stop`.
 
-Note that this really burns through tokens, because every prompt sends the entire history of prompts to your LLM.
+Note that OpenHands really burns through tokens, because every prompt sends the entire history of prompts to your LLM.
 
 They will hopefully optimize in future, see https://github.com/All-Hands-AI/OpenHands/issues/6893.
 
@@ -21,18 +21,23 @@ Docs: https://docs.all-hands.dev/modules/usage/installation
 
 Mounting: https://docs.all-hands.dev/modules/usage/runtimes#connecting-to-your-filesystem
 
-I wrote some bash functions to do the work, referenced above. It will do a couple docker pulls the first time you start the server.
+I wrote some bash functions to do the work, referenced above. Pull the docker images with `openhands_pull`.
 
 
 ## Info
 
-Settings like your API key are stored by the outer container where mounted from your filesystem (`~/.openhands-state`).
+Persistent settings like your LLM API key are stored by the outer container where mounted from your filesystem (`~/.openhands-state`).
 
-Generated code is stored in the inner container in `/workspace`.
+If you start with `openhands_start`, generated code is stored in the inner container in `/workspace`. 
 
-Browse the generated code by:
-1. Opening a shell on the inner container: `openhands_inner`
-2. `cd /workspace`
+If you start with `openhands_mount_start`, i.e. set the `WORKSPACE_MOUNT_PATH`, you can access the generated code on your host machine in that directory on your local filesystem.
+Useful because you'll have all your tools available instead of whatever limited tools are available via a docker bash session on the inner container.
 
 Note that the inner container isn't created until you go to http://localhost:3000 and give it a prompt.
+
+Outer container:
+* Command: `/app/entrypoint.sh uvicorn openhands.server.listen:app --host 0.0.0.0 --port 3000`
+
+Inner (runtime) container:
+* Command: `/openhands/micromamba/bin/micromamba run -n openhands poetry run python -u -m openhands.runtime.action_execution_server 35833 --working-dir /workspace --plugins agent_skills jupyter vscode --username openhands --user-id YOUR_UID`
 

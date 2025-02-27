@@ -5,7 +5,7 @@ Made for mac and zsh.
 
 
 
-## Customizing
+## Private Config
 
 Put private shell stuff into `.zshrc_local`.
 
@@ -28,6 +28,8 @@ Or just update the symlinks:
 scripts/install-symlinks.sh
 ```
 
+Note that `install-node.sh` intentionally does not overlap with `install-brew.sh`, even though those tools all have homebrew packages.
+Install any node-based tools globally using npm, managed by nvm, instead of using homebrew.
 
 
 

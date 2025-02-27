@@ -45,7 +45,6 @@ brew install htop           # better top
 brew install httpie         # better curl
 brew install imagemagick
 brew install jq             # json
-brew install localtunnel
 brew install nano
 brew install neofetch       # system info
 brew install pygments       # syntax highlighter
@@ -68,9 +67,6 @@ $(brew --prefix)/opt/fzf/install
 brew install git
 brew install git-gui
 brew install hub            # github
-
-# Node
-brew install nvm
 
 # Python
 brew install python
@@ -95,7 +91,6 @@ brew install wireshark      # tshark
 
 # Cloud
 brew install awscli            # AWS
-brew install aws-cdk           # AWS Cloud Development Kit
 brew install aws-sam-cli       # AWS Serverless Application Model
 brew install azure-cli         # Azure
 brew install --cask docker     # Docker
@@ -110,6 +105,7 @@ brew install supabase/tap/supabase
 brew install --cask cursor
 brew install --cask google-chrome
 brew install --cask iterm2
+brew install --cask omnigraffle
 brew install --cask spotify
 brew install --cask vlc
 brew install --cask wireshark
