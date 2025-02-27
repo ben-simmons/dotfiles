@@ -5,9 +5,14 @@
 
 ## Using
 
-1. `openhands`
+1. Start with`openhands_start`
     * Custom function in `openhands.sh` to start the OpenHands container.
 2. Go to http://localhost:3000 in your browser.
+3. Stop with `openhands_stop`.
+
+Note that this really burns through tokens, because every prompt sends the entire history of prompts to your LLM.
+
+They will hopefully optimize in future, see https://github.com/All-Hands-AI/OpenHands/issues/6893.
 
 
 ## Installing
@@ -16,41 +21,18 @@ Docs: https://docs.all-hands.dev/modules/usage/installation
 
 Mounting: https://docs.all-hands.dev/modules/usage/runtimes#connecting-to-your-filesystem
 
-I wrote some bash functions to do the work, referenced above, but the more detailed explanations are below.
+I wrote some bash functions to do the work, referenced above. It will do a couple docker pulls the first time you start the server.
 
 
-### Prep
+## Info
 
-Create a directory in your filesystem that can be mounted to the OpenHands container.
+Settings like your API key are stored by the outer container where mounted from your filesystem (`~/.openhands-state`).
 
-Note that OpenHands can modify and delete any files in this directory!
-```
-mkdir -p ~/workplace/volumes/openhands
-```
+Generated code is stored in the inner container in `/workspace`.
 
-I export this as `OPENHANDS_WORKSPACE_BASE`.
+Browse the generated code by:
+1. Opening a shell on the inner container: `openhands_inner`
+2. `cd /workspace`
 
+Note that the inner container isn't created until you go to http://localhost:3000 and give it a prompt.
 
-### Download
-```
-docker pull docker.all-hands.dev/all-hands-ai/runtime:0.26-nikolaik
-```
-
-### Run
-
-```
-docker run -it --rm --pull=always \
-    -e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.26-nikolaik \
-    -e LOG_ALL_EVENTS=true \
-    -e SANDBOX_USER_ID=$(id -u) \
-    -e WORKSPACE_MOUNT_PATH=OPENHANDS_WORKSPACE_BASE \
-    -v OPENHANDS_WORKSPACE_BASE:/opt/workspace_base \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v ~/.openhands-state:/.openhands-state \
-    -p 3000:3000 \
-    --add-host host.docker.internal:host-gateway \
-    --name openhands-app \
-    docker.all-hands.dev/all-hands-ai/openhands:0.26
-```
-
-The container will mount your `OPENHANDS_WORKSPACE_BASE` directory at `/opt/workspace_base` in the container.

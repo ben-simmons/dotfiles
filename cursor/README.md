@@ -6,16 +6,18 @@ https://www.cursor.com/
 
 | Action                        | Shortcut        | Notes                    |
 |:------------------------------|:----------------|:-------------------------|
-| Open Chat                     | Cmd + L         |                          |
-| Open Chat in code or terminal | Cmd + K         |                          |
-| Open Extensions View          | Cmd + Shift + X |                          |
-| Open File Explorer View       | Cmd + Shift + E |                          |
-| Open Keyboard Shortcuts       | Cmd + R + S     |                          |
-| Open Terminal                 | Ctrl + ~        |                          |
-| Open Themes                   | Cmd + R + T     |                          |
-| Search Actions                | Cmd + Shift + P | Aka Open Command Palette |
-| Search Everywhere             | Cmd + P         | Aka Open Palette         |
-| Preview Markdown              | Cmd + Shift + V |                          |
+| Open project from folder      | Cmd + O         |                          |
+| Open chat                     | Cmd + L         |                          |
+| Open chat in code or terminal | Cmd + K         |                          |
+| Open extensions               | Cmd + Shift + X |                          |
+| Open file explorer            | Cmd + Shift + E |                          |
+| Open keyboard shortcuts       | Cmd + R + S     |                          |
+| Open terminal                 | Ctrl + ~        |                          |
+| Open themes                   | Cmd + R + T     |                          |
+| Search actions                | Cmd + Shift + P | Aka Open Command Palette |
+| Search files                  | Cmd + P         |                          |
+| Search code                   | Cmd + Shift + F |                          |
+| Preview markdown              | Cmd + Shift + V |                          |
 
 ## Theme
 

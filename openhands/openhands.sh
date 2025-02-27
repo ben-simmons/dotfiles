@@ -1,10 +1,16 @@
-alias openhands="openhands_start"
-
 export OPENHANDS_RUNTIME_CONTAINER_IMAGE="docker.all-hands.dev/all-hands-ai/runtime:0.26-nikolaik"
 export OPENHANDS_CONTAINER_IMAGE="docker.all-hands.dev/all-hands-ai/openhands:0.26"
 export OPENHANDS_CONTAINER_NAME="openhands-app"
 export OPENHANDS_CONTAINER_PORT=3000
 export OPENHANDS_STATE_BASE="$HOME/.openhands-state"
+
+alias openhands="openhands_start"
+alias openhands_outer="dockbash $OPENHANDS_CONTAINER_NAME"
+
+openhands_inner() {
+  local INNER_CONTAINER_NAME=$(docker ps --filter 'name=openhands-runtime' --format '{{.Names}}')
+  docker exec -it "$INNER_CONTAINER_NAME" bash
+}
 
 # Uncomment and set the following to mount a workspace volume:
 #export OPENHANDS_WORKSPACE_BASE="$HOME/workplace/volumes/openhands"

@@ -23,17 +23,18 @@ without any real structure to what I'm doing.
 
 Shortcuts
 
-| Action                    | Shortcut                | Notes                                |
-|:--------------------------|:------------------------|:-------------------------------------|
-| Lock screen               | Ctrl + Cmd + Q          |                                      |
-| Search everywhere         | Cmd + Space             | Spotlight Search                     |
-| Switch window             | Ctrl + Arrow            |                                      |
-| Switch window with select | Cmd + Tab (+ Arrow)     |                                      |
-| End of line               | Cmd + Right             |                                      |
-| Beginning of line         | Cmd + Left              |                                      |
-| Delete line               | Cmd + Backspace         |                                      |
-| Mission Control           | Swipe up with 3 fingers | Shows all open windows.              |
-| AI prompt                 | Opt + Space             | ChatGPT and Claude both map to this. | 
+| Action                    | Shortcut                        | Notes                                |
+|:--------------------------|:--------------------------------|:-------------------------------------|
+| Lock screen               | Ctrl + Cmd + Q                  |                                      |
+| Search everywhere         | Cmd + Space                     | Spotlight Search                     |
+| Switch window             | Ctrl + Left/Right               |                                      |
+| Switch window             | Swipe left/right with 3 fingers |                                      |
+| Switch window with select | Cmd + Tab (+ Left/Right)        |                                      |
+| End of line               | Cmd + Right                     |                                      |
+| Beginning of line         | Cmd + Left                      |                                      |
+| Delete line               | Cmd + Backspace                 |                                      |
+| Mission Control           | Swipe up with 3 fingers         | Shows all open windows.              |
+| AI prompt                 | Opt + Space                     | ChatGPT and Claude both map to this. | 
 
 ## Zoxide
 

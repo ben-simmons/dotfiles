@@ -94,13 +94,13 @@ brew install tcptraceroute  # route
 brew install wireshark      # tshark
 
 # Cloud
-brew install --cask docker  # Docker
-
-brew install aws-cdk        # AWS Cloud Development Kit
-brew install aws-sam-cli    # AWS Serverless Application Model
-brew install awscli         # AWS
-brew install azure-cli      # Azure
-brew install doctl          # Digital Ocean
+brew install awscli            # AWS
+brew install aws-cdk           # AWS Cloud Development Kit
+brew install aws-sam-cli       # AWS Serverless Application Model
+brew install azure-cli         # Azure
+brew install --cask docker     # Docker
+brew install doctl             # Digital Ocean
+brew install google-cloud-sdk  # Google Cloud
 
 # AI
 brew install ollama

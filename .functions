@@ -85,15 +85,16 @@ up() {
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
-# From: https://github.com/mathiasbynens/dotfiles/blob/main/.functions
+# Based on code here: https://github.com/mathiasbynens/dotfiles/blob/main/.functions
 tre() {
   tree -aC -I '.git|.idea|.venv|bower_components|node_modules' --dirsfirst "$@" | less -FRNX;
 }
 
 
 ###############################################################################
-# Security
+# Security                                                                    #
 ###############################################################################
+# Get the password for a particular key stored on the MacOS keychain
 password() {
   security find-generic-password -a "$1" -g
 }
@@ -297,8 +298,8 @@ whichpy() {
 }
 
 
-##############################################################################
-# VLC
+###############################################################################
+# VLC                                                                         #
 ###############################################################################
 # Cut a video into a shorter video segment.
 # Start and stop time are in seconds.
@@ -356,4 +357,13 @@ ch() {
      from urls order by last_visit_time desc" |
   awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
+}
+
+
+###############################################################################
+# Docker                                                                      #
+###############################################################################
+# Start an interactive bash session in a running docker container
+dockbash() {
+  docker exec -it "$1" bash
 }
