@@ -50,6 +50,9 @@ link_dotfile .gitconfig .gitconfig
 link_dotfile .gitconfig_local .gitconfig_local
 link_dotfile .gitignore_global .gitignore_global
 
+# openhands
+link_dotfile openhands/openhands.sh .openhands.sh
+
 # custom commands
 mkdir -p "${HOME}/.local"
 link_dotfile bin .local/bin
