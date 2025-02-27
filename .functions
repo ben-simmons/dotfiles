@@ -86,7 +86,7 @@ up() {
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
 # From: https://github.com/mathiasbynens/dotfiles/blob/main/.functions
-function tre() {
+tre() {
   tree -aC -I '.git|.idea|.venv|bower_components|node_modules' --dirsfirst "$@" | less -FRNX;
 }
 
@@ -102,16 +102,38 @@ password() {
 ###############################################################################
 # Network                                                                     #
 ###############################################################################
-# Which network interface is active
-whichif() {
-  # Based on code here:
-  # https://superuser.com/questions/89994/how-can-i-tell-which-network-interface-my-computer-is-using/627581#627581
-  iface=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
-  if [ -n "$iface" ]; then
-      echo "$iface"
+# Show all the names (CNs and SANs) listed in the SSL certificate
+# for a given domain
+certnames() {
+  if [ -z "${1}" ]; then
+    echo "ERROR: No domain specified.";
+    return 1;
+  fi;
+
+  local domain="${1}";
+  echo "Testing ${domain}…";
+  echo ""; # newline
+
+  local tmp=$(echo -e "GET / HTTP/1.0\nEOT" \
+    | openssl s_client -connect "${domain}:443" -servername "${domain}" 2>&1);
+
+  if [[ "${tmp}" = *"-----BEGIN CERTIFICATE-----"* ]]; then
+    local certText=$(echo "${tmp}" \
+      | openssl x509 -text -certopt "no_aux, no_header, no_issuer, no_pubkey, \
+      no_serial, no_sigdump, no_signame, no_validity, no_version");
+    echo "Common Name:";
+    echo ""; # newline
+    echo "${certText}" | grep "Subject:" | sed -e "s/^.*CN=//" | sed -e "s/\/emailAddress=.*//";
+    echo ""; # newline
+    echo "Subject Alternative Name(s):";
+    echo ""; # newline
+    echo "${certText}" | grep -A 1 "Subject Alternative Name:" \
+      | sed -e "2s/DNS://g" -e "s/ //g" | tr "," "\n" | tail -n +2;
+    return 0;
   else
-      echo "null"
-  fi
+    echo "ERROR: Certificate not found.";
+    return 1;
+  fi;
 }
 
 # What's running on given port
@@ -143,6 +165,18 @@ traffic() {
   fi
 }
 
+# Which network interface is active
+whichif() {
+  # Based on code here:
+  # https://superuser.com/questions/89994/how-can-i-tell-which-network-interface-my-computer-is-using/627581#627581
+  iface=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
+  if [ -n "$iface" ]; then
+      echo "$iface"
+  else
+      echo "null"
+  fi
+}
+
 # Connected wifi network name and password
 wifi() {
   local ssid pw
@@ -151,8 +185,13 @@ wifi() {
   echo "$ssid\n$pw"
 }
 
+
+###############################################################################
+# Servers                                                                     #
+###############################################################################
+
 # Start a simple local file server
-function start_server() {
+server() {
     local PORT=${1:-8000}  # Default to port 8000 if not specified
 
     # Kill any process using the port
@@ -179,7 +218,7 @@ function start_server() {
 }
 
 # Start a simple local file server and expose it with localtunnel
-start_server_tunnel() {
+server_tunnel() {
     local PORT=${1:-8000}  # Default to port 8000 if not specified
     local SUBDOMAIN=${2:-""}  # Optional subdomain
 
@@ -256,6 +295,7 @@ gstan() {
 whichpy() {
   pyenv which python
 }
+
 
 ##############################################################################
 # VLC
