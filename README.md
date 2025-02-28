@@ -40,10 +40,11 @@ Install any node-based tools globally using npm, managed by nvm, instead of usin
 Link your iTerm2 profile:
 
 1. Open iTerm2
-2. Select iTerm2 > Settings
-3. Under the General tab, check the box labeled "Load preferences from a custom folder or URL".
-    1. Note: if you select an empty folder, it will export your current preferences into that folder.
-4. Point it to `~/dotfiles/iterm2/com.googlecode.iterm2.plist`.
+2. iTerm2 > Settings > General > Settings
+3. Check the box labeled "Load preferences from a custom folder or URL".
+   * Note: if you select an empty folder, it will export your current preferences into that folder.
+4. Select `~/dotfiles/iterm2/`
+   * Where `com.googlecode.iterm2.plist` is stored.
 
 Install Shell Integration:
 
@@ -83,7 +84,7 @@ Setup:
 3. Click "Enable generative AI feature"
 4. Add your OpenAI API key.
    * https://platform.openai.com/api-keys
-5. Also export it as `OPEN_API_KEY` in `.zshrc_local` for use with the `openai` custom command.
+5. Also export it as `OPENAI_API_KEY` in `.zshrc_local` for use with the `openai` custom command.
 
 To use:
 

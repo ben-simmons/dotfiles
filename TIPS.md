@@ -32,7 +32,7 @@ Shortcuts
 | Switch window with select | Cmd + Tab (+ Left/Right)        |                                      |
 | End of line               | Cmd + Right                     |                                      |
 | Beginning of line         | Cmd + Left                      |                                      |
-| Delete line               | Cmd + Backspace                 |                                      |
+| Delete line               | Cmd + Delete                    |                                      |
 | Mission Control           | Swipe up with 3 fingers         | Shows all open windows.              |
 | AI prompt                 | Opt + Space                     | ChatGPT and Claude both map to this. | 
 

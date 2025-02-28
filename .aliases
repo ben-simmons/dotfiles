@@ -21,6 +21,8 @@ alias etgi="eza --tree --git-ignore"
 
 alias h="history"
 
+alias kdiff="kdiff3"
+
 alias l="ls"
 alias la="ls -al"
 
@@ -35,6 +37,8 @@ alias year="date +%Y"
 alias dayofyear="date +%j"   # Get day of the year
 
 alias pw="password"
+
+alias secret="generate_secret 128 hex"  # 512 bits of entropy
 
 alias untar='tar xvf'
 

@@ -45,6 +45,7 @@ brew install htop           # better top
 brew install httpie         # better curl
 brew install imagemagick
 brew install jq             # json
+brew install kdiff3         # graphical diff / merge
 brew install nano
 brew install neofetch       # system info
 brew install pygments       # syntax highlighter
@@ -66,7 +67,7 @@ $(brew --prefix)/opt/fzf/install
 # Git
 brew install git
 brew install git-gui
-brew install hub            # github
+brew install hub               # Github
 
 # Python
 brew install python
@@ -74,6 +75,8 @@ brew install pyenv
 
 brew install poetry
 poetry config virtualenvs.in-project true
+
+brew install uv
 
 # Database
 brew install neo4j
@@ -83,11 +86,11 @@ brew install sqlite
 
 # Network
 brew install mtr
-brew install ngrep          # network grep
+brew install ngrep             # network grep
 brew install nmap
-brew install tcpdump        # packet analyzer
-brew install tcptraceroute  # route
-brew install wireshark      # tshark
+brew install tcpdump           # packet analyzer
+brew install tcptraceroute     # route
+brew install wireshark         # tshark
 
 # Cloud
 brew install awscli            # AWS
@@ -98,8 +101,8 @@ brew install doctl             # Digital Ocean
 brew install google-cloud-sdk  # Google Cloud
 
 # AI
-brew install ollama
-brew install supabase/tap/supabase
+brew install aider             # pair programming in your terminal
+brew install ollama            # local LLMs
 
 # Applications
 brew install --cask cursor
