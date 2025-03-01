@@ -3,6 +3,14 @@
 ###############################################################################
 # General                                                                     #
 ###############################################################################
+base64_encode() {
+  echo "$1" | base64
+}
+
+base64_decode() {
+  echo "$1" | base64 --decode
+}
+
 # Simple calculator
 calc() {
   local result=""
@@ -22,6 +30,11 @@ calc() {
     printf "%s" "$result"
   fi
   printf "\\n"
+}
+
+# Open a text file in the default editor
+edit() {
+  open -e "$1"
 }
 
 # Create a new directory and enter it
@@ -102,12 +115,6 @@ tre() {
 generate_secret() {
   local length=${1:-64}
   local format=${2:-hex}
-
-  # Check if length is a positive integer
-  if ! [[ "$length" =~ ^[1-9][0-9]*$ ]]; then
-    echo "Error: Length must be a positive integer" >&2
-    return 1
-  fi
 
   case "$format" in
     hex)

@@ -1,0 +1,3 @@
+# Ignore the .gitignore files
+.gitconfig_local
+.zshrc_local
