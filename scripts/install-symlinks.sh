@@ -41,6 +41,7 @@ link_dotfile .fzf.zsh .fzf.zsh
 link_dotfile .p10k.zsh .p10k.zsh
 link_dotfile .zshrc .zshrc
 link_dotfile .zshrc_local .zshrc_local
+link_dotfile .zprofile .zprofile
 
 # python
 link_dotfile .pythonrc.py .pythonrc.py
@@ -52,6 +53,9 @@ link_dotfile .gitignore_global .gitignore_global
 
 # openhands
 link_dotfile openhands/openhands.sh .openhands.sh
+
+# stacks
+link_dotfile stacks .stacks
 
 # custom commands
 mkdir -p "${HOME}/.local"

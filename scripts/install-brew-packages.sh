@@ -19,6 +19,7 @@ brew install antigen
 
 # General
 brew install ag             # better ack (code search)
+brew install asitop         # performance monitor for Apple Silicon
 brew install bat            # better cat
 brew install eza            # better ls
 brew install fd             # better find (file search)
@@ -63,8 +64,7 @@ brew install uv
 
 # Database
 brew install neo4j
-brew install --cask neo4j
-brew install postgresql@17
+# brew install postgresql@17
 brew install sqlite
 
 # Network
@@ -79,19 +79,22 @@ brew install wireshark         # tshark
 brew install awscli            # AWS
 brew install aws-sam-cli       # AWS Serverless Application Model
 brew install azure-cli         # Azure
-brew install --cask docker     # Docker
 brew install doctl             # Digital Ocean
 brew install google-cloud-sdk  # Google Cloud
 
 # AI
 brew install aider             # pair programming in your terminal
-brew install ollama            # local LLMs
 
 # Applications
 brew install --cask cursor
+brew install --cask docker     # includes cli (docker)
 brew install --cask google-chrome
 brew install --cask iterm2
+brew install --cask neo4j
+brew install --caks lm-studio  # includes cli (lms)
+brew install --cask ollama     # includes cli (ollama)
 brew install --cask omnigraffle
 brew install --cask spotify
+brew install --cask sublime-text
 brew install --cask vlc
 brew install --cask wireshark

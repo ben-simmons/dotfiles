@@ -88,6 +88,7 @@ alias fa="falias"
 alias fcom="fcommand"
 alias fe="fenv"
 alias fh="fhistory"
+alias fl="flocate"
 alias fp="fpath"
 alias fv="fvar"
 
