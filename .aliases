@@ -22,15 +22,14 @@ alias ea="eza --all --long"
 alias et="eza --tree"
 alias etgi="eza --tree --git-ignore"
 
-alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
-alias uuid="guid"
-
 alias h="history"
 
 alias kdiff="kdiff3"
 
 alias l="ls"
 alias la="ls -al"
+
+alias macdown="open -a MacDown"
 
 alias now="date '+%Y-%m-%d %H:%M:%S'"
 alias week="date +%V"        # Get week number
@@ -51,6 +50,9 @@ alias untar='tar xvf'
 # URL encode strings
 alias urlencode="python -c 'import sys; from urllib import parse; print(parse.quote(sys.argv[1]));'"
 alias urldecode="python -c 'import sys; from urllib import parse; print(parse.unquote(sys.argv[1]));'"
+
+alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
+alias guid="uuid"
 
 
 ###############################################################################

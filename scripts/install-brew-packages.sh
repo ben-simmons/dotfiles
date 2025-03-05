@@ -14,6 +14,7 @@ brew install font-fira-code-nerd-font
 brew install bash
 brew install bash-completion
 brew install zsh
+brew install zsh-completions
 
 brew install antigen
 
@@ -92,6 +93,7 @@ brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask neo4j
 brew install --caks lm-studio  # includes cli (lms)
+brew install --cask macdown
 brew install --cask ollama     # includes cli (ollama)
 brew install --cask omnigraffle
 brew install --cask spotify

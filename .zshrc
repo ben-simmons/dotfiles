@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 ###############################################################################
 # Antigen                                                                     #
 ###############################################################################
@@ -131,16 +130,22 @@ export PATH="$PATH:/Users/ben/.lmstudio/bin"
 # Include hidden files in autocompletion
 setopt globdots
 
-# bash completion
+# homebrew bash completion
 [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
-# zsh completions
+# homebrew zsh completions
 #if type brew &>/dev/null; then
 #  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 #
 #  autoload -Uz compinit
 #  compinit
 #fi
+
+# docker completions
+# Don't need if docker installed as a cask, completions are already at:
+# /opt/homebrew/share/zsh/site-functions/_docker-compose
+# /opt/homebrew/share/zsh/site-functions/_docker
+#path=(~/.docker/completions $fpath)
 
 # fzf-tab
 # https://github.com/Aloxaf/fzf-tab#configure
